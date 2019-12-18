@@ -1,0 +1,35 @@
+<sbg-spotlight
+  [loading$]="loading$"
+  [clientDetails]="selectedClient$"
+></sbg-spotlight>
+<client-product-detail-spotlight
+  [productDetails]="productDetail$ | async"
+  [institutionName]="institutionName"
+  [loading]="loading$ | async"
+></client-product-detail-spotlight>
+<div
+  *ngIf="!isProtection"
+  [ngClass]="isLiability ? 'assets-main-container-stretched' : 'assets-main-container'"
+>
+  <div class="tile-container">
+    <sbg-loading-container [spinner]="true" [loading]="loading$ | async">
+      <client-growth
+        [currencyCode]="currencyCode"
+        [productDetails]="productDetail$ | async"
+        [isLiability]="isLiability"
+        [dropdownData]="growthDropdownData$ | async"
+        [selectedDropdownOption]="selectedGrowthGraphDropdownOption$ | async"
+        [graphData]="growthGraphData$"
+      ></client-growth>
+    </sbg-loading-container>
+  </div>
+  <div class="tile-container" *ngIf="!isLiability">
+    <sbg-loading-container [spinner]="true" [loading]="loading$ | async">
+      <client-asset-allocation-dashboard-tile
+        [model]="assetAllocation$"
+        [currencyCode]="currencyCode"
+        isLinkable="false"
+      ></client-asset-allocation-dashboard-tile>
+    </sbg-loading-container>
+  </div>
+</div>

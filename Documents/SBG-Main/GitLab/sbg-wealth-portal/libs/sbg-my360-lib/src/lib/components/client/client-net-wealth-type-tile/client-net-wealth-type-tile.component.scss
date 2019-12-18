@@ -1,0 +1,100 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.card {
+  border-radius: 2px;
+  background-color: $white-color;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.card-header {
+  @extend %t3-action;
+  border-bottom: 1px solid $gray-medium-color;
+  padding: 12px 16px;
+  color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+}
+
+.institute-name {
+  @extend %t5;
+  color: $font-light-color;
+  font-weight: normal;
+}
+
+.card-text-right {
+  @extend %t5;
+  display: flex;
+  padding-top: 6px;
+}
+
+.card-current-value {
+  width: 50%;
+  border-right: 1px solid $gray-medium-color;
+  padding: 12px 16px;
+}
+
+.card-value-totals {
+  @extend %t4;
+}
+
+.card-equity-value {
+  width: 50%;
+  padding: 12px 16px;
+}
+
+.card-content-combined {
+  display: flex;
+  justify-content: space-between;
+  background-color: $gray-light-color;
+  @extend %t5;
+}
+
+.card-onshore-flag {
+  color: $notification-color;
+  vertical-align: middle;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.card-offshore-flag {
+  color: $identifier-color;
+  vertical-align: middle;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media all and (max-width: 639px) {
+  .net-wealth-main-container {
+    display: block;
+    margin: 8px;
+  }
+
+  .net-wealth-main-container-left {
+    margin-bottom: 16px;
+  }
+
+  .page-heading {
+    @include t2;
+    margin: 24px 0 16px 8px;
+  }
+
+  .card {
+    margin-bottom: 8px;
+  }
+}

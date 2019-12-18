@@ -1,0 +1,9 @@
+{
+    "goalSaverBaseUrl": ".",
+    "goalSaverApiPath": "/sbg-mobile/rest",
+    "wealthBaseUrl": ".",
+    "wealthApiPath": "/sbg-mobile/rest",
+    "logoutUrl": "https://log:out@testmobilebanking.standardbank.co.za:5084",
+    "debugging": true,
+    "timeoutSeconds": 1800
+}

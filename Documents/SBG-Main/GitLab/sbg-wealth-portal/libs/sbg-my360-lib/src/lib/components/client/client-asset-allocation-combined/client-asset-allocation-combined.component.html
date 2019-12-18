@@ -1,0 +1,20 @@
+<div class="main-container">
+  <div class="page-heading t2">
+    Asset Allocation
+    <span class="hide-for-large">for {{ firstName }} {{ lastName }}</span>
+  </div>
+  <div class="main-container-top">
+    <client-asset-allocation-graph
+      [model]="model"
+      [chartOptions]="graphConfig"
+    ></client-asset-allocation-graph>
+  </div>
+  <div class="main-container-bottom">
+    <client-net-wealth-type
+      [context]="context"
+      *ngFor="let type of types | async"
+      [model]="type"
+      (typeSelected)="typeSelected($event)"
+    ></client-net-wealth-type>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="main-container">
+  <div class="page-heading t2">
+    {{ name }}
+    <span class="hide-for-large">for {{ firstName }} {{ lastName }}</span>
+  </div>
+  <div class="search">
+    <div class="search-icon-position">
+      <mat-icon><span>search</span></mat-icon>
+    </div>
+    <mat-form-field floatPlaceholder="never">
+      <input
+        matInput
+        placeholder="Search {{ name }}"
+        [(ngModel)]="searchText"
+      />
+    </mat-form-field>
+  </div>
+  <div class="net-wealth-assets-container">
+    <client-net-wealth-type-tile
+      (tileTypeSelected)="productSelected(product)"
+      *ngFor="let product of model | async | productListSearch: searchText"
+      [model]="product"
+      [type]="type"
+      [name]="name"
+    ></client-net-wealth-type-tile>
+  </div>
+  <div
+    *ngIf="
+      ((model | async)
+        ? (model | async | productListSearch: searchText).length === 0
+        : true) && searchText !== ''
+    "
+  >
+    <div class="layout-flex-row-center flex no-matches-found">
+      No matches found
+    </div>
+  </div>
+</div>

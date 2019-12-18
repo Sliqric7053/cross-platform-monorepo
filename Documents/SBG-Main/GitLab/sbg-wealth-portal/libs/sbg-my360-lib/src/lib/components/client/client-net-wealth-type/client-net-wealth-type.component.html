@@ -1,0 +1,30 @@
+<div
+  class="card"
+  (click)="onTypeClicked()"
+  data-dtmid="link_content_Net Wealth"
+  attr.data-dtmtext="{{ context }} {{ name }}"
+>
+  <div class="card-header t3 action">
+    {{ name }} <mat-icon svgIcon="icn_chevron_right"></mat-icon>
+  </div>
+  <div class="card-content">
+    <div class="card-row">
+      <span class="left t5"
+        ><i class="material-icons card-onshore-flag">label</i> Onshore</span
+      >
+      <span class="centre t5">{{ onShorePercentage }}</span>
+      <span class="right t5">{{ onShoreValue }}</span>
+    </div>
+    <div class="card-row">
+      <span class="left t5"
+        ><i class="material-icons card-offshore-flag">label</i> Offshore</span
+      >
+      <span class="centre t5">{{ offShorePercentage }}</span>
+      <span class="right t5">{{ offShoreValue }}</span>
+    </div>
+  </div>
+  <div class="card-row-total t5 weight-medium color-dark">
+    <span>Total Value</span>
+    <span>{{ totalValue }}</span>
+  </div>
+</div>

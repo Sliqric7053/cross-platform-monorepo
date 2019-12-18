@@ -1,0 +1,15 @@
+{
+  "fileServerFolder": ".",
+  "fixturesFolder": false,
+  "integrationFolder": "./src/integration",
+  "pluginsFile": "./src/plugins/index",
+  "supportFile": false,
+  "video": false,
+  "videosFolder": "../../dist/cypress/apps/apps/wealth-portal-e2e/videos",
+  "screenshotsFolder": "../../dist/cypress/apps/apps/wealth-portal-e2e/screenshots",
+  "chromeWebSecurity": false,
+  "animationDistanceThreshold": 5,
+  "waitForAnimations": true,
+  "baseUrl": "http://localhost:4200",
+  "numTestsKeptInMemory": 20
+}

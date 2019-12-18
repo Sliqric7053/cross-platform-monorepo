@@ -1,0 +1,26 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.asset-allocation-graph-container {
+  div {
+    display: grid;
+    grid-template-columns: minmax(200px, 700px);
+    justify-content: center;
+  }
+
+  chart {
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.asset-allocation-total-assets-heading {
+  @extend %t7;
+  text-align: center;
+}
+
+.asset-allocation-total-assets-value {
+  @extend %t4;
+  text-align: center;
+}

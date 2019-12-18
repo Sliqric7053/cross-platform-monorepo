@@ -1,0 +1,67 @@
+<div>Test Kitchen Sink</div>
+
+<img src="../../../assets/images/toolbar_logo.png">
+<div><sbg-button-ng icon>home</sbg-button-ng></div>
+<div><mat-icon>favorite</mat-icon></div>
+
+<div>I see</div>
+<div>
+    <div class="element1">element1</div>
+    <div class="element2" style="display:none">element2</div>
+    <div class="element3" style="display:none">element3</div>
+    <div class="element4" style="visibility:hidden">element4</div>
+</div>
+
+<div>I see - duplicate text on page</div>
+<div>
+    <div>element11</div>
+    <div style="display:none">element11</div>
+    <div style="display:none">element12</div>
+    <div>element12</div>
+</div>
+
+<div>I interact with the page</div>
+<div>
+    <sbg-button-ng (click)="buttonClicked()">Click</sbg-button-ng>
+    <div class="element21" style="display: none">element21</div>
+</div>
+
+<div>I interact with form controls</div>
+
+<mat-radio-group [(ngModel)]="testRadioButton">
+    <mat-radio-button value="Radio foo selected">
+        Radio foo label
+    </mat-radio-button>
+    <mat-radio-button value="Radio bar selected">
+        Radio bar label
+    </mat-radio-button>
+</mat-radio-group>
+<div class="selectedRadioButton">{{testRadioButton}}</div>
+
+<mat-checkbox [(ngModel)]="testCheckboxFoo">Checkbox foo label</mat-checkbox>
+<mat-checkbox [(ngModel)]="testCheckboxBar">Checkbox bar label</mat-checkbox>
+<div>foo checked: {{testCheckboxFoo}}</div>
+<div>bar checked: {{testCheckboxBar}}</div>
+
+<mat-form-field>
+    <span matPrefix>@ &nbsp;</span>
+    <input matInput placeholder="Email label" [formControl]="testFormControl">
+    <mat-hint>My input hint</mat-hint>
+    <mat-error *ngIf="testFormControl.hasError('pattern')">
+        Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="testFormControl.hasError('required')">
+        Email is required
+    </mat-error>
+</mat-form-field>
+<mat-form-field>
+    <span matPrefix>R &nbsp;</span>
+    <input matInput placeholder="My input 2 label">
+    <mat-hint>My input hint</mat-hint>
+    <mat-error>My input error</mat-error>
+</mat-form-field>
+<test-kitchen-plug></test-kitchen-plug>
+<sbg-slider [min]="2" [max]="15" [(ngModel)]="testSlider1"></sbg-slider>
+<sbg-slider [min]="2" [max]="15" [(ngModel)]="testSlider2"></sbg-slider>
+<div>{{testSlider1}}</div>
+<div>{{testSlider2}}</div>

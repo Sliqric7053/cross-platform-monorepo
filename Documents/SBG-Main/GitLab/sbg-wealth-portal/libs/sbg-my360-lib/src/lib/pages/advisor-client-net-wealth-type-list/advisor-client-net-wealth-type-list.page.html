@@ -1,0 +1,48 @@
+<sbg-spotlight
+  [loading$]="loading$"
+  [clientDetails]="selectedClient$"
+></sbg-spotlight>
+<mat-tab-group
+  (selectedTabChange)="tabChanged($event)"
+  [selectedIndex]="activeIndex"
+>
+  <mat-tab
+    label="Combined"
+    data-dtmid="content_nav_links"
+    data-dtmtext="secondary nav | combined"
+  >
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-net-wealth-list
+        [model]="combinedProducts$"
+        [name]="productName"
+        type="Combined"
+      ></client-net-wealth-list>
+    </sbg-loading-container>
+  </mat-tab>
+  <mat-tab
+    label="Onshore"
+    data-dtmid="content_nav_links"
+    data-dtmtext="secondary nav | ONSHORE"
+  >
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-net-wealth-list
+        [model]="onshoreProducts$"
+        [name]="productName"
+        type="Onshore"
+      ></client-net-wealth-list>
+    </sbg-loading-container>
+  </mat-tab>
+  <mat-tab
+    label="Offshore"
+    data-dtmid="content_nav_links"
+    data-dtmtext="secondary nav | OFFSHORE"
+  >
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-net-wealth-list
+        [model]="offshoreProducts$"
+        [name]="productName"
+        type="Offshore"
+      ></client-net-wealth-list>
+    </sbg-loading-container>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,153 @@
+{
+  "page1": {
+    "graph_subscript": [
+      ""
+    ],
+    "analysis_date": "",
+    "expected_returns_table": {
+      "col1_heading_part1": "",
+      "col1_heading_part2": "",
+      "col2_heading_tax_excluded": "",
+      "col2_heading_tax_included": "",
+      "row1_subheading": "",
+      "row2_subheading": "",
+      "row3_subheading": ""
+    },
+    "amount_invested_table": {
+      "col1_heading": "",
+      "col2_heading": "",
+      "row1_subheading": "",
+      "row2_subheading": "",
+      "row3_subheading": ""
+    },
+    "expected_return_condition": [
+      ""
+    ],
+    "affordability_table": {
+      "col1_heading": "",
+      "col2_heading": "",
+      "row1_subheading": "",
+      "row2_subheading": "",
+      "row3_subheading": ""
+    },
+    "criteria_table": {
+      "col1_heading": "",
+      "col2_heading": "",
+      "row1_subheading": "",
+      "row2_subheading": "",
+      "row3_subheading": "",
+      "row4_subheading": "",
+      "row5_subheading": "",
+      "row6_subheading": "",
+      "row7_subheading": "",
+      "row8_subheading": "",
+      "row9_subheading": ""
+    },
+    "bottom_page_heading1": ""
+  },
+  "page2": {
+    "page_heading": "",
+    "page_introduction": [
+      ""
+    ],
+    "section1": {
+      "heading": "",
+      "paragraph1_scenario1": [
+        ""
+      ],
+      "paragraph1_scenario2": [
+        ""
+      ]
+    },
+    "section2": {
+      "heading": "",
+      "paragraph1_part1": [
+        ""
+      ],
+      "paragraph1_part2": "",
+      "paragraph1_part3": [
+        ""
+      ],
+      "paragraph2": [
+        ""
+      ]
+    },
+    "section3": {
+      "heading": "",
+      "paragraph1_part1": [
+        ""
+      ],
+      "paragraph1_part2": "",
+      "paragraph1_part3": [""],
+      "paragraph2_tax_excluded": "",
+      "paragraph2_tax_included": ""
+    },
+    "section4": {
+      "heading": "",
+      "paragraph1": [
+        ""
+      ]
+    }
+  },
+  "page3": {
+      "section1": {
+      "heading": "",
+      "paragraph1_part1": "",
+      "paragraph1_part2_option1": "",
+      "paragraph1_part2_option2": "",
+      "paragraph2": [
+        ""
+      ]
+    },
+    "section2": {
+      "heading": "",
+      "paragraph1": [
+        ""
+      ],
+      "paragraph2": [
+        ""
+      ]
+    },
+    "section3": {
+      "heading": "",
+      "paragraph1": [
+          ""
+        ]
+    },
+    "product_cost_table": {
+      "col1_heading": "",
+      "col2_heading": "",
+      "col3_heading": "",
+      "col4_heading": "",
+      "col5_heading": ""
+    }
+  },
+    "page4": {
+    "section1": {
+      "heading": "",
+      "list": {
+        "title": "",
+        "list_item1": "",
+        "list_item2": "",
+        "list_item3": [
+          ""
+        ],
+        "list_item4": [
+          ""
+        ],
+        "list_item5": [
+          ""
+        ],
+        "list_item6": "",
+        "list_item7": "",
+        "list_item8": [
+          ""
+        ]
+      }
+    },
+    "signature_of_client": "",
+    "signature_of_planner": "",
+    "date": "",
+    "signed_at": ""
+  }
+}

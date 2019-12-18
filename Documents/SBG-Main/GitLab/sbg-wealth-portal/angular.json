@@ -1,0 +1,402 @@
+{
+  "version": 1,
+  "projects": {
+    "wealth-portal": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/wealth-portal",
+      "sourceRoot": "apps/wealth-portal/src",
+      "prefix": "sbg-wealth-portal",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/wealth-portal",
+            "index": "apps/wealth-portal/src/index.html",
+            "main": "apps/wealth-portal/src/main.ts",
+            "polyfills": "apps/wealth-portal/src/polyfills.ts",
+            "tsConfig": "apps/wealth-portal/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/wealth-portal/src/favicon.ico",
+              "apps/wealth-portal/src/assets"
+            ],
+            "styles": [
+              "apps/wealth-portal/src/styles.scss",
+              "apps/wealth-portal/src/assets/css/_fonts.scss"
+            ]
+          },
+          "configurations": {
+            "sit": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/wealth-portal/src/environments/environment.ts",
+                  "with": "apps/wealth-portal/src/environments/environment.sit.ts"
+                }
+              ]
+            },
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/wealth-portal/src/environments/environment.ts",
+                  "with": "apps/wealth-portal/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "prod": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/wealth-portal/src/environments/environment.ts",
+                  "with": "apps/wealth-portal/src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/wealth-portal/src/environments/environment.ts",
+                  "with": "apps/wealth-portal/src/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/wealth-portal/src/environments/environment.ts",
+                  "with": "apps/wealth-portal/src/environments/environment.local.ts"
+                }
+              ]
+            },
+            "e2e": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/wealth-portal/src/environments/environment.ts",
+                  "with": "apps/wealth-portal/src/environments/environment.e2e.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "wealth-portal:build"
+          },
+          "configurations": {
+            "sit": {
+              "browserTarget": "wealth-portal:build:sit"
+            },
+            "production": {
+              "browserTarget": "wealth-portal:build:production"
+            },
+            "local": {
+              "browserTarget": "wealth-portal:build:local",
+              "proxyConfig": "apps/wealth-portal/proxy.local.config.json"
+            },
+            "e2e": {
+              "browserTarget": "wealth-portal:build:e2e",
+              "proxyConfig": "apps/wealth-portal/proxy.local.config.json"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "wealth-portal:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/wealth-portal/tsconfig.app.json",
+              "apps/wealth-portal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/wealth-portal/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/wealth-portal/src/test.ts",
+            "karmaConfig": "apps/wealth-portal/karma.conf.js",
+            "polyfills": "apps/wealth-portal/src/polyfills.ts",
+            "tsConfig": "apps/wealth-portal/src/tsconfig.spec.json",
+            "styles": [
+              "apps/wealth-portal/src/styles.scss",
+              "apps/wealth-portal/src/assets/css/_fonts.scss"
+            ],
+            "assets": [
+              "apps/wealth-portal/src/assets",
+              "apps/wealth-portal/src/favicon.ico"
+            ]
+          }
+        }
+      }
+    },
+    "wealth-portal-e2e": {
+      "root": "apps/wealth-portal-e2e",
+      "sourceRoot": "apps/wealth-portal-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/wealth-portal-e2e/cypress.json",
+            "tsConfig": "apps/wealth-portal-e2e/tsconfig.e2e.json",
+            "devServerTarget": "wealth-portal:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "wealth-portal:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/wealth-portal-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/wealth-portal-e2e/**"]
+          }
+        }
+      }
+    },
+    "shared-sbg-common": {
+      "root": "libs/shared/sbg-common",
+      "sourceRoot": "libs/shared/sbg-common/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/sbg-common/tsconfig.lib.json",
+              "libs/shared/sbg-common/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/sbg-common/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/sbg-common/jest.config.js",
+            "tsConfig": "libs/shared/sbg-common/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "sbg-my360-lib": {
+      "projectType": "library",
+      "root": "libs/sbg-my360-lib",
+      "sourceRoot": "libs/sbg-my360-lib/src",
+      "prefix": "sbg-wealth-portal",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/sbg-my360-lib/tsconfig.lib.json",
+              "libs/sbg-my360-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/sbg-my360-lib/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/sbg-my360-lib/src/test.ts",
+            "tsConfig": "libs/sbg-my360-lib/tsconfig.spec.json",
+            "karmaConfig": "libs/sbg-my360-lib/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "sbg-my360-app": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/sbg-my360-app",
+      "sourceRoot": "apps/sbg-my360-app/src",
+      "prefix": "sbg-my360-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sbg-my360-app",
+            "index": "apps/sbg-my360-app/src/index.html",
+            "main": "apps/sbg-my360-app/src/main.ts",
+            "polyfills": "apps/sbg-my360-app/src/polyfills.ts",
+            "tsConfig": "apps/sbg-my360-app/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/sbg-my360-app/src/favicon.ico",
+              "apps/sbg-my360-app/src/assets"
+            ],
+            "styles": ["apps/sbg-my360-app/src/styles.scss"]
+          },
+          "configurations": {
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/sbg-my360-app/src/environments/environment.ts",
+                  "with": "apps/sbg-my360-app/src/environments/environment.local.ts"
+                }
+              ]
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/sbg-my360-app/src/environments/environment.ts",
+                  "with": "apps/sbg-my360-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sbg-my360-app:build"
+          },
+          "configurations": {
+            "local": {
+              "browserTarget": "sbg-my360-app:build:local",
+              "proxyConfig": "apps/sbg-my360-app/proxy.local.config.json"
+            },
+            "production": {
+              "browserTarget": "sbg-my360-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sbg-my360-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/sbg-my360-app/src/test.ts",
+            "polyfills": "apps/sbg-my360-app/src/polyfills.ts",
+            "tsConfig": "apps/sbg-my360-app/tsconfig.spec.json",
+            "karmaConfig": "apps/sbg-my360-app/karma.conf.js",
+            "assets": [
+              "apps/sbg-my360-app/src/favicon.ico",
+              "apps/sbg-my360-app/src/assets"
+            ],
+            "styles": ["apps/sbg-my360-app/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/sbg-my360-app/tsconfig.app.json",
+              "apps/sbg-my360-app/tsconfig.spec.json",
+              "apps/sbg-my360-app/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/sbg-my360-app/e2e/protractor.conf.js",
+            "devServerTarget": "sbg-my360-app:serve"
+          },
+          "configurations": {
+            "local": {
+              "browserTarget": "sbg-my360-app:build:local",
+              "proxyConfig": "apps/sbg-my360-app/proxy.local.config.json"
+            },
+            "production": {
+              "devServerTarget": "sbg-my360-app:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "sbg-my360-app-e2e": {
+      "root": "apps/sbg-my360-app-e2e",
+      "sourceRoot": "apps/sbg-my360-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/sbg-my360-app-e2e/cypress.json",
+            "tsConfig": "apps/sbg-my360-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "sbg-my360-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sbg-my360-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/sbg-my360-app-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/sbg-my360-app-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "wealth-portal"
+}

@@ -1,0 +1,56 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.tile-header-inactive {
+  border-bottom: none;
+  p {
+    display: inherit;
+    @extend %t3;
+    width: 100%;
+  }
+}
+
+.card-onshore-flag {
+  color: $identifier-color;
+  vertical-align: middle;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.card-offshore-flag {
+  color: $notification-color;
+  vertical-align: middle;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.flag-transparent {
+  color: transparent;
+}
+
+.flag-dashboard {
+  margin-bottom: -16px;
+}
+
+.flag-dashboard-offshore {
+  margin-right: 3px;
+  margin-left: 0;
+  transform: initial;
+}
+
+.comparison-graph-aa {
+  background-color: #f8faff;
+}
+
+.white-background {
+  background-color: #ffffff;
+}

@@ -1,0 +1,42 @@
+<div
+  class="tile layout-flex-column"
+  (click)="onTileClicked()"
+  data-dtmid="link_Content_Dashboard"
+  data-dtmtext="Net wealth"
+>
+  <div
+    class="layout-flex-column-start tile-header margin-bottom-50"
+    [ngClass]="{ 'tile-header-inactive': isLinkable === 'false' }"
+  >
+    <p>
+      <span class="icon-avatar"
+        ><mat-icon svgIcon="icn_cash_notes" class="avatar-icon"></mat-icon
+      ></span>
+      Net Wealth Breakdown
+      <mat-icon
+        *ngIf="isLinkable === 'true'"
+        svgIcon="icn_chevron_right"
+      ></mat-icon>
+    </p>
+  </div>
+  <div class="tile-section">
+    <div class="comparison-graph">
+      <client-total-graph [model]="totalGraphModelAssets"></client-total-graph>
+      <div class="label-container">
+        <span class="t5 font-light-color">Assets </span>
+        <span class="t5 weight-medium color-dark label-value-position">
+          {{ assetsValue }}</span
+        >
+      </div>
+      <client-total-graph
+        [model]="totalGraphModelLiabilties"
+      ></client-total-graph>
+      <div class="label-container">
+        <span class="t5 font-light-color">Liabilities</span>
+        <span class="t5 weight-medium color-dark label-value-position">
+          {{ liabilitiesValue }}</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

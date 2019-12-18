@@ -1,0 +1,43 @@
+@media all and (max-width: 639px) {
+  .tile-container {
+    margin: 15px 1px;
+  }
+}
+
+.tile {
+  cursor: pointer;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.tile-header {
+  padding: 14px 15px;
+  border-bottom: 1px solid $gray-medium-color;
+  p {
+    display: inherit;
+    @extend %t4-action !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    i.material-icons {
+      color: $primary-color;
+    }
+  }
+  &-grey {
+    span {
+      color: $font-dark-color !important;
+    }
+  }
+}
+
+.tile-section {
+  height: 100%;
+  flex: 1;
+}
+
+@media all and (max-width: 639px) {
+  .tile-header {
+    height: auto;
+  }
+}

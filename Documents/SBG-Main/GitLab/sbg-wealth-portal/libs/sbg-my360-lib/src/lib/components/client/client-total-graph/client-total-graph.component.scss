@@ -1,0 +1,16 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.value-graph-container {
+  display: flex;
+  width: 100%;
+
+  p {
+    margin-bottom: 0;
+    border: none;
+    height: 6px;
+  }
+}
+
+.spacer {
+  padding: 0 10px;
+}

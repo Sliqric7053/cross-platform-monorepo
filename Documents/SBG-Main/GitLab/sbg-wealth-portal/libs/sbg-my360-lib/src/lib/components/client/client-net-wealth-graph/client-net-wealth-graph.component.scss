@@ -1,0 +1,13 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.net-wealth-graph-container {
+  div {
+    display: grid;
+    grid-template-columns: minmax(200px, 1180px);
+    justify-content: center;
+  }
+
+  chart {
+    overflow: hidden;
+  }
+}

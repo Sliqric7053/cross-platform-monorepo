@@ -1,0 +1,43 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.main-container-top {
+  padding: 0 !important;
+}
+
+.comparison-graph {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  line-height: initial;
+}
+
+.weight-medium {
+  font-weight: 500 !important;
+}
+
+.font-light-color {
+  color: $font-light-color !important;
+}
+
+.assets-container {
+  float: left;
+  margin-left: 16px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.liablities-container {
+  float: right;
+  margin-right: 16px;
+  padding-bottom: 10px;
+  text-align: right;
+  padding-top: 10px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait),
+  only screen and (max-device-width: 768px) {
+  .card {
+    margin-bottom: 8px;
+  }
+}

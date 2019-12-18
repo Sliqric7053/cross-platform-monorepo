@@ -1,0 +1,107 @@
+<sbg-spotlight
+  [loading$]="loading$"
+  [clientDetails]="selectedClient$"
+  [hasSeedAnalytics]="hasSeedAnalytics"
+></sbg-spotlight>
+<div class="netwealth-banner" *ngIf="hasNetWealth && !hasProfileSummaryError">
+  <div class="netwealth-calculation">
+    <p>{{ clientFirstName }}'s total net wealth</p>
+    <p class="value">
+      <span>{{ totalValue }}</span>
+    </p>
+  </div>
+
+  <client-net-wealth-graph
+    isMobile="true"
+    [model]="model"
+    [chartOptions]="graphConfig"
+  ></client-net-wealth-graph>
+</div>
+<div class="date">
+  <span>Last updated: {{ dateTime }}</span>
+  <span>{{ userLastLogin }}</span>
+</div>
+<div class="client-profile-main-container main-container">
+  <div>
+    <div
+      class="tile-container"
+      data-dtmid="link_content_Asset Allocation"
+      data-dtmtext="Asset Allocation tile click"
+    >
+      <sbg-loading-container [spinner]="true" [loading]="loading$ | async">
+        <client-asset-allocation-dashboard-tile
+          *ngIf="
+            hasAssetAllocation && isClientEnabled && !hasProfileSummaryError
+          "
+          [model]="assetAllocationCombinedSummary$"
+          (tileSelected)="assetAllocationTileSelected()"
+          isLinkable="true"
+        ></client-asset-allocation-dashboard-tile>
+        <client-ghost-tile
+          heading="Asset Allocation"
+          *ngIf="
+            (!hasAssetAllocation || !isClientEnabled) && !hasProfileSummaryError
+          "
+        ></client-ghost-tile>
+        <sbg-ui-error-tile
+          heading="Asset Allocation"
+          (errorTileSelected)="profileSummaryErrorTileSelected()"
+          *ngIf="hasProfileSummaryError"
+        ></sbg-ui-error-tile>
+      </sbg-loading-container>
+    </div>
+  </div>
+  <div class="grid">
+    <div
+      class="tile-container"
+      data-dtmid="link_content_Net Wealth"
+      data-dtmtext="Net Wealth tile click"
+    >
+      <sbg-loading-container [spinner]="true" [loading]="loading$ | async">
+        <client-net-wealth-dashboard-tile
+          *ngIf="hasNetWealth && isClientEnabled && !hasProfileSummaryError"
+          [model]="netWealthCombinedSummary$"
+          (tileSelected)="netWealthTileSelected()"
+          isLinkable="true"
+        ></client-net-wealth-dashboard-tile>
+        <client-ghost-tile
+          heading="Net Wealth Breakdown"
+          *ngIf="(!hasNetWealth || !isClientEnabled) && !hasProfileSummaryError"
+        ></client-ghost-tile>
+        <sbg-ui-error-tile
+          heading="Net Wealth Breakdown"
+          (errorTileSelected)="profileSummaryErrorTileSelected()"
+          *ngIf="hasProfileSummaryError"
+        ></sbg-ui-error-tile>
+      </sbg-loading-container>
+    </div>
+    <div
+      class="tile-container"
+      data-dtmid="link_content_Linked Accounts"
+      data-dtmtext="Linked Accounts tile click"
+    >
+      <sbg-loading-container
+        [spinner]="true"
+        [loading]="isProductsLoading$ | async"
+      >
+        <client-product-list-dashboard-tile
+          *ngIf="hasProducts && isClientEnabled && !hasProductsError"
+          [groupProducts]="groupProducts$"
+          [thirdPartyProducts]="thirdPartyProducts$"
+          [unmanagedProducts]="unmanagedProducts$"
+          (tileSelected)="linkedAccountsTileSelected()"
+        ></client-product-list-dashboard-tile>
+        <client-ghost-tile
+          heading="Linked Accounts"
+          *ngIf="(!hasProducts || !isClientEnabled) && !hasProductsError"
+        ></client-ghost-tile>
+        <sbg-ui-error-tile
+          heading="Linked Accounts"
+          (errorTileSelected)="productListErrorTileSelected()"
+          *ngIf="hasProductsError"
+        ></sbg-ui-error-tile>
+      </sbg-loading-container>
+    </div>
+  </div>
+</div>
+<div class="disclaimer">All values displayed are pre-tax where applicable</div>

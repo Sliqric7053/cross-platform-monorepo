@@ -1,0 +1,43 @@
+<sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+  <div class="client-list-container">
+    <div
+      class="no-clients-icon"
+      *ngIf="!hasClients || (clientList$ | async).length === 0"
+    >
+      <span>
+        <img
+          src="../../../../assets/images/empty_client_list.png"
+          width="92"
+          height="92"
+        />
+      </span>
+      <p class="no-clients-text">
+        <span class="t2"
+          >There are currently<br />
+          no clients to show</span
+        >
+      </p>
+    </div>
+    <div *ngIf="hasClients && (clientList$ | async).length > 0">
+      <div class="page-header t2">
+        <div>
+          Client List<span class="client-number t6"
+            >{{ (clientList$ | async).length }}hello clients</span
+          >
+        </div>
+      </div>
+      <div class="client-container">
+        <sbg-table
+          [tableData$]="clientList$"
+          [tableConfig]="createTableConfig()"
+          [rowComponent]="rowComponent"
+          [avatarRow]="true"
+          [filterComponent]="filterComponent"
+          [searchText]="searchText"
+          [openFilterPanel]="openFilterPanel"
+          (rowSelected)="clientSelected($event)"
+        ></sbg-table>
+      </div>
+    </div>
+  </div>
+</sbg-loading-container>

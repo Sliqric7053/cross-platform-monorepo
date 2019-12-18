@@ -1,0 +1,82 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.netwealth-total-calculation {
+  margin: 0px 16px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.primary {
+  color: $primary-color;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.al-line-spacer {
+  padding: 0 15px;
+  margin-top: 20px;
+}
+
+.wealth-main-graph {
+  margin: 0 16px;
+  .font-light-color {
+    color: $font-light-color !important;
+  }
+}
+
+.net-wealth-main-container-top {
+  background-color: $white-color;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  padding: 24px 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0;
+}
+
+.net-wealth-main-container-bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 1em;
+  margin-top: 24px;
+}
+
+.assets-container {
+  float: left;
+  margin-left: 16px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.liablities-container {
+  float: right;
+  margin-right: 16px;
+  padding-bottom: 10px;
+  text-align: right;
+  padding-top: 10px;
+}
+
+div.graph-container {
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.comparison-graph {
+  padding: 0 12px;
+}
+
+div.assets-liabilities-values {
+  display: flex;
+  width: 100%;
+  justify-content: space-between !important;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait),
+  only screen and (max-device-width: 768px) {
+  .netwealth-total-calculation {
+    margin: 0px 16px 20px;
+  }
+}

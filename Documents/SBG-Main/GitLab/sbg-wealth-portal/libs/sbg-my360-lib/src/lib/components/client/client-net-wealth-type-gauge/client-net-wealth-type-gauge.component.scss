@@ -1,0 +1,31 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.asset-data {
+  margin-left: -105px;
+}
+
+.gauge-position {
+  width: auto;
+  padding: 0;
+}
+
+.main-gauge-container {
+  background-color: white;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  @media only screen and (max-width: 640px) {
+    margin-bottom: 8px;
+  }
+}
+
+p:first-child {
+  @extend %t3-action;
+}
+
+p:last-child {
+  @extend %t5;
+}

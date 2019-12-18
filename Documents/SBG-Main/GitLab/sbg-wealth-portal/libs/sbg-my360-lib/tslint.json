@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "sbgWealthPortal", "camelCase"],
+    "component-selector": [true, "element", "sbg-wealth-portal", "kebab-case"]
+  }
+}

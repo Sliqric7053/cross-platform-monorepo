@@ -1,0 +1,410 @@
+<sbg-spotlight
+  [loading$]="loading$"
+  [clientDetails]="selectedClient$"
+></sbg-spotlight>
+<sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+  <div class="main-container">
+    <div class="page-header t2">
+      Linked Accounts &nbsp;
+      <span class="hide-for-large">for {{ firstName }} {{ lastName }}</span>
+      <span class="client-number t6"
+        >{{ ((groupProducts$ | async) ? (groupProducts$ | async).length : 0) +
+        ((thirdPartyProducts$ | async) ? (thirdPartyProducts$ | async).length :
+        0) + ((unmanagedProducts$ | async) ? (unmanagedProducts$ | async).length
+        : 0) }} Linked</span
+      >
+    </div>
+    <div class="search">
+      <div class="search-icon-position">
+        <mat-icon>
+          <span>search</span>
+        </mat-icon>
+      </div>
+      <mat-form-field floatPlaceholder="never">
+        <input
+          matInput
+          placeholder="Search linked accounts"
+          [(ngModel)]="searchText"
+        />
+      </mat-form-field>
+    </div>
+    <div class="enable-disable-row">
+      <div>
+        <mat-checkbox
+          [disabled]="!displayThirdPartyProducts && !displayUnmanagedProducts"
+          [(ngModel)]="displaySbsaProducts"
+          >Standard Bank Accounts</mat-checkbox
+        >
+      </div>
+      <div class="not-enabled">
+        <mat-checkbox
+          [disabled]="!displaySbsaProducts && !displayUnmanagedProducts"
+          [(ngModel)]="displayThirdPartyProducts"
+          >Other institutions
+        </mat-checkbox>
+      </div>
+      <div class="not-enabled">
+        <mat-checkbox
+          [disabled]="!displaySbsaProducts && !displayThirdPartyProducts"
+          [(ngModel)]="displayUnmanagedProducts"
+          >Other assets and liabilities
+        </mat-checkbox>
+      </div>
+    </div>
+    <div class="client-container hide-for-small">
+      <div>
+        <table>
+          <tbody>
+            <tr class="table-header-row t6 weight-med color-dark">
+              <td class="column-spacer"></td>
+              <td>Account name</td>
+              <td>Institution</td>
+              <td>Account number</td>
+              <td>Product type</td>
+              <td>Asset allocation</td>
+              <td class="text-right">Onshore / Offshore</td>
+            </tr>
+            <tr>
+              <td>
+                <hr />
+              </td>
+              <td>
+                <hr />
+              </td>
+              <td>
+                <hr />
+              </td>
+              <td>
+                <hr />
+              </td>
+              <td>
+                <hr />
+              </td>
+              <td>
+                <hr />
+              </td>
+              <td>
+                <hr />
+              </td>
+            </tr>
+            <ng-template
+              [ngIf]="((groupProducts$ | async) ? ((groupProducts$ | async | productListSearch: searchText).length === 0) : true) && ((thirdPartyProducts$
+                | async) ? ((thirdPartyProducts$ | async | productListSearch: searchText).length === 0) : true) && ((unmanagedProducts$
+                | async) ? ((unmanagedProducts$ | async | productListSearch: searchText).length === 0) : true) && (searchText
+                !== '')"
+            >
+              <tr>
+                <td colspan="7" class="flex no-matches-found">
+                  No matches found
+                </td>
+              </tr>
+            </ng-template>
+            <ng-template
+              [ngIf]="((groupProducts$ | async | productListSearch: searchText).length > 0) || ((thirdPartyProducts$ | async | productListSearch:
+                searchText).length > 0) || ((unmanagedProducts$ | async | productListSearch: searchText).length > 0)"
+            >
+              <tr class="table-header-alphabet t4 weight-med">
+                <td class="alphabet column-spacer">&nbsp;</td>
+                <td>Standard Bank Group</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <ng-template [ngIf]="displaySbsaProducts">
+                <tr
+                  class="name-row t5 not-active"
+                  *ngFor="let groupProduct of groupProducts$ | async | productListSearch: searchText"
+                  (click)="productSelected(groupProduct.productId, groupProduct.netWealthType)"
+                >
+                  <td class="column-spacer ">&nbsp;</td>
+                  <td class="title-case">
+                    {{groupProduct.productName.toLowerCase()}}
+                  </td>
+                  <td class="title-case">
+                    {{groupProduct.institutionName.toLowerCase()}}
+                  </td>
+                  <td>{{groupProduct.accountNumber}}</td>
+                  <td>{{groupProduct.netWealthType}}</td>
+                  <td>{{groupProduct.assetAllocationType}}</td>
+                  <td class="text-right ">
+                    <span *ngIf="groupProduct.isOffShore "
+                      >Offshore
+                      <i class="material-icons card-offshore-flag ">label</i>
+                    </span>
+                    <span *ngIf="!groupProduct.isOffShore "
+                      >Onshore
+                      <i class="material-icons card-onshore-flag ">label</i>
+                    </span>
+                  </td>
+                </tr>
+              </ng-template>
+              <tr>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+              </tr>
+              <tr class="table-header-alphabet t4 weight-med">
+                <td class="alphabet column-spacer ">&nbsp;</td>
+                <td>Other institutions</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <ng-template [ngIf]="displayThirdPartyProducts">
+                <tr
+                  class="name-row t5 not-active"
+                  *ngFor="let thirdPartyProduct of thirdPartyProducts$ | async | productListSearch:
+                            searchText"
+                  (click)="productSelected(thirdPartyProduct.productId, thirdPartyProduct.netWealthType)"
+                >
+                  <td class="column-spacer ">&nbsp;</td>
+                  <td class="title-case">
+                    {{thirdPartyProduct.productName.toLowerCase()}}
+                  </td>
+                  <td class="title-case">
+                    {{thirdPartyProduct.institutionName.toLowerCase()}}
+                  </td>
+                  <td>{{thirdPartyProduct.accountNumber}}</td>
+                  <td>{{thirdPartyProduct.netWealthType}}</td>
+                  <td>{{thirdPartyProduct.assetAllocationType}}</td>
+                  <td class="text-right ">
+                    <span *ngIf="thirdPartyProduct.isOffShore "
+                      >Offshore
+                      <i class="material-icons card-offshore-flag ">label</i>
+                    </span>
+                    <span *ngIf="!thirdPartyProduct.isOffShore "
+                      >Onshore
+                      <i class="material-icons card-onshore-flag ">label</i>
+                    </span>
+                  </td>
+                </tr>
+              </ng-template>
+              <tr>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+                <td>
+                  <hr />
+                </td>
+              </tr>
+              <tr class="table-header-alphabet t4 weight-med">
+                <td class="alphabet column-spacer ">&nbsp;</td>
+                <td>Other assets and liabilities</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <ng-template [ngIf]="displayUnmanagedProducts">
+                <tr
+                  class="name-row t5 not-active"
+                  *ngFor="let unmanagedProduct of unmanagedProducts$ | async | productListSearch:
+                            searchText"
+                  (click)="productSelected(unmanagedProduct.productId, unmanagedProduct.netWealthType)"
+                >
+                  <td class="column-spacer ">&nbsp;</td>
+                  <td class="title-case">
+                    {{unmanagedProduct.productName.toLowerCase()}}
+                  </td>
+                  <td class="title-case">
+                    {{unmanagedProduct.institutionName.toLowerCase()}}
+                  </td>
+                  <td>{{unmanagedProduct.accountNumber}}</td>
+                  <td>{{unmanagedProduct.netWealthType}}</td>
+                  <td>{{unmanagedProduct.assetAllocationType}}</td>
+                  <td class="text-right ">
+                    <span *ngIf="unmanagedProduct.isOffShore "
+                      >Offshore
+                      <i class="material-icons card-offshore-flag ">label</i>
+                    </span>
+                    <span *ngIf="!unmanagedProduct.isOffShore "
+                      >Onshore
+                      <i class="material-icons card-onshore-flag ">label</i>
+                    </span>
+                  </td>
+                </tr>
+              </ng-template>
+            </ng-template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="hide-for-large mobile-content">
+      <ng-template
+        [ngIf]="((groupProducts$ | async) ? ((groupProducts$ | async | productListSearch: searchText).length===0
+                            ) : true) && ((thirdPartyProducts$ | async) ? ((thirdPartyProducts$ | async | productListSearch:
+                            searchText).length===0 ) : true) && ((unmanagedProducts$ | async) ? ((unmanagedProducts$ | async
+                            | productListSearch: searchText).length===0 ) : true) && (searchText !=='' ) "
+      >
+        <tr class="no-matches-mobile ">
+          <td colspan="7 " class="flex no-matches-found ">
+            No matches found
+          </td>
+        </tr>
+      </ng-template>
+      <span class="institute-text ">Standard Bank Group</span>
+      <ng-template
+        [ngIf]="((groupProducts$ | async | productListSearch: searchText).length> 0) || ((thirdPartyProducts$ | async | productListSearch: searchText).length > 0)"
+      >
+        <ng-template [ngIf]="displaySbsaProducts">
+          <div
+            *ngFor="let groupProduct of groupProducts$ | async | productListSearch: searchText"
+          >
+            <div class="linked-accounts-card">
+              <div class="account-row">
+                <span class="t5 weight-med color-dark title-case"
+                  >{{groupProduct.productName.toLowerCase()}}</span
+                >
+                <div class="t6 color-med">
+                  <span *ngIf="groupProduct.isOffShore"
+                    >Offshore
+                    <i class="material-icons card-offshore-flag">label</i>
+                  </span>
+                  <span *ngIf="!groupProduct.isOffShore"
+                    >Onshore
+                    <i class="material-icons card-onshore-flag">label</i>
+                  </span>
+                </div>
+              </div>
+              <span class="t5"
+                >{{groupProduct.institutionName}} |
+                {{groupProduct.accountNumber}}</span
+              >
+              <div class="product-row">
+                <div class="card-width">
+                  <span class="t6">Product type</span>
+                  <br />
+                  <span class="t5">{{groupProduct.netWealthType}}</span>
+                </div>
+                <div class="card-width">
+                  <span class="t6">Asset allocation</span>
+                  <br />
+                  <span class="t5">{{groupProduct.assetAllocationType}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        <span class="institute-text">Other institutions</span>
+        <ng-template [ngIf]="displayThirdPartyProducts">
+          <div
+            *ngFor="let thirdPartyProduct of thirdPartyProducts$ | async | productListSearch: searchText"
+          >
+            <div class="linked-accounts-card">
+              <div class="account-row">
+                <span class="t5 weight-med color-dark title-case"
+                  >{{thirdPartyProduct.productName.toLowerCase()}}</span
+                >
+                <div class="t6 color-med">
+                  <span *ngIf="thirdPartyProduct.isOffShore"
+                    >Offshore
+                    <i class="material-icons card-offshore-flag">label</i>
+                  </span>
+                  <span *ngIf="!thirdPartyProduct.isOffShore"
+                    >Onshore
+                    <i class="material-icons card-onshore-flag">label</i>
+                  </span>
+                </div>
+              </div>
+              <span class="t5"
+                >{{thirdPartyProduct.institutionName}} |
+                {{thirdPartyProduct.accountNumber}}</span
+              >
+              <div class="product-row">
+                <div class="card-width">
+                  <span class="t6">Product type</span>
+                  <br />
+                  <span class="t5">{{thirdPartyProduct.netWealthType}}</span>
+                </div>
+                <div class="card-width">
+                  <span class="t6">Asset allocation</span>
+                  <br />
+                  <span class="t5"
+                    >{{thirdPartyProduct.assetAllocationType}}</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        <span class="institute-text">Client’s own</span>
+        <ng-template [ngIf]="displayUnmanagedProducts">
+          <div
+            *ngFor="let unmanagedProduct of unmanagedProducts$ | async | productListSearch: searchText"
+          >
+            <div class="linked-accounts-card">
+              <div class="account-row">
+                <span class="t5 weight-med color-dark title-case"
+                  >{{unmanagedProduct.productName.toLowerCase()}}</span
+                >
+                <div class="t6 color-med">
+                  <span *ngIf="unmanagedProduct.isOffShore"
+                    >Offshore
+                    <i class="material-icons card-offshore-flag">label</i>
+                  </span>
+                  <span *ngIf="!unmanagedProduct.isOffShore"
+                    >Onshore
+                    <i class="material-icons card-onshore-flag">label</i>
+                  </span>
+                </div>
+              </div>
+              <span class="t5">{{unmanagedProduct.institutionName}}</span>
+              <div class="product-row">
+                <div class="card-width">
+                  <span class="t6">Product type</span>
+                  <br />
+                  <span class="t5">{{unmanagedProduct.netWealthType}}</span>
+                </div>
+                <div class="card-width">
+                  <span class="t6">Asset allocation</span>
+                  <br />
+                  <span class="t5"
+                    >{{unmanagedProduct.assetAllocationType}}</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-template>
+    </div>
+  </div>
+</sbg-loading-container>

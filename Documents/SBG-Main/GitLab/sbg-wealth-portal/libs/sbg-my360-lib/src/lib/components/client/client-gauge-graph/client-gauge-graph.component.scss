@@ -1,0 +1,21 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.net-wealth-gauge-container {
+  display: grid;
+  grid-template-columns: minmax(288px, 1fr);
+  grid-template-rows: 150px;
+  justify-content: center;
+  margin-left: -50px;
+
+  chart {
+    overflow: hidden;
+  }
+
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait),
+    only screen and (max-device-width: 768px) {
+    .card {
+      margin-bottom: 8px;
+    }
+    margin-bottom: 8px;
+  }
+}

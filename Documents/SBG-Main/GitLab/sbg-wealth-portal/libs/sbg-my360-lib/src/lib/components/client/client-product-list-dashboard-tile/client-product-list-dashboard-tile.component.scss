@@ -1,0 +1,35 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.accounts-tile-container {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px 0 58px;
+  height: 80%;
+
+  @media all and (max-width: 639px) {
+    display: block;
+    padding-bottom: 24px;
+  }
+}
+
+.accounts-container {
+  line-height: 0.4rem;
+}
+
+.number {
+  margin-right: 8px;
+  font-weight: 900;
+  width: 17px;
+  display: inline-block;
+  text-align: right;
+}
+
+.account-name {
+  @extend %t5;
+}
+
+@media all and (max-width: 639px) {
+  .circle-text div {
+    font-size: 10px !important;
+  }
+}

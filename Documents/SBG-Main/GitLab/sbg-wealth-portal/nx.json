@@ -1,0 +1,30 @@
+{
+  "npmScope": "sbg-wealth-portal",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "wealth-portal-e2e": {
+      "tags": []
+    },
+    "wealth-portal": {
+      "tags": []
+    },
+    "shared-sbg-common": {
+      "tags": []
+    },
+    "sbg-my360-lib": {
+      "tags": []
+    },
+    "sbg-my360-app-e2e": {
+      "tags": []
+    },
+    "sbg-my360-app": {
+      "tags": []
+    }
+  }
+}

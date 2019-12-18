@@ -1,0 +1,33 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.assets-main-container {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-gap: 24px;
+  margin: 24px;
+  width: 80%;
+  margin: 24px auto;
+}
+
+.assets-main-container-stretched {
+  margin: 24px 30px;
+}
+
+.tile-container {
+  background-color: $white-color;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+@media all and (max-width: 639px) {
+  .assets-main-container {
+    display: block;
+    grid-gap: 8px;
+    margin: 0;
+  }
+
+  .tile-container {
+    margin: 16px 0;
+    height: auto;
+  }
+}

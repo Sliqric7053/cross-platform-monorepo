@@ -1,0 +1,174 @@
+@import '../_sbg-typography-module';
+
+.mat-sidenav-container {
+  @extend %t5;
+}
+
+mat-icon {
+  vertical-align: middle;
+  &.medium {
+    font-size: 18px;
+    height: 18px;
+    width: 18px;
+  }
+  &.small {
+    font-size: 14px;
+    height: 14px;
+    width: 14px;
+  }
+  &.inverse {
+    color: $white-color;
+  }
+  &.primary {
+    color: $primary-color;
+  }
+}
+
+.mat-form-field {
+  width: 100%;
+  line-height: normal;
+  &:not(mat-focused) .mat-form-field-label {
+    color: $font-light-color;
+  }
+  &.input-inverse {
+    label {
+      @extend %t4-inverse;
+      color: $white-color !important;
+      &.mat-input-placeholder.mat-input-placeholder {
+        @extend %t4-inverse;
+        color: $white-color !important;
+      }
+    }
+  }
+  &:not([floatplaceholder]) {
+    &.mat-form-field-should-float {
+      .mat-input-placeholder {
+        font-size: 1rem; // angular material transforms this down to 12
+      }
+    }
+  }
+  &.prefixed-placeholder {
+    .mat-input-placeholder-wrapper {
+      left: -16px;
+    }
+  }
+}
+
+.mat-slider-horizontal {
+  width: 100%;
+}
+
+.mat-checkbox {
+  @extend %t5;
+}
+
+.mat-spinner {
+  &,
+  & > svg {
+    height: 40px !important;
+    width: 40px !important;
+  }
+}
+
+.mat-option.mat-option,
+.mat-select-value.mat-select-value {
+  @extend %t5;
+}
+
+.mat-ink-bar {
+  height: 4px !important;
+  background-color: $tertiary-color !important;
+}
+
+mat-tab-header {
+  background-color: $white-color;
+  font-family: $font-family;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  align-items: flex-start;
+  height: 48px;
+  padding: 0 0 0 0;
+  margin: 0;
+  border-bottom: 1px solid $gray-light-color;
+  .mat-tab-list {
+    display: flex;
+    justify-content: center;
+  }
+  .mat-tab-header-pagination {
+    height: 100%;
+  }
+}
+
+.left-align-tabs {
+  > mat-tab-header > div > .mat-tab-list {
+    justify-content: start;
+  }
+}
+
+.mat-tab {
+  &-label {
+    min-width: inherit;
+    text-transform: uppercase;
+    @extend %t5;
+    opacity: 1 !important;
+    &-active {
+      @extend %t5-action;
+    }
+  }
+  &-body-content {
+    overflow: hidden !important;
+  }
+}
+
+.mat-progress-bar-buffer {
+  background-color: $gray-dark-color !important;
+}
+
+snack-bar-container.success-snackbar {
+  background-color: $positive-color;
+}
+
+.mat-dialog {
+  &-container {
+    padding: 0 !important;
+    display: block;
+    border-radius: 2px;
+  }
+
+  &-title {
+    margin: 0 !important;
+    padding: 16px;
+    display: block;
+    @extend %t2-inverse;
+    background-color: $secondary-color;
+  }
+
+  &-content {
+    display: block;
+    padding: 16px 16px 0 !important;
+    margin: auto !important;
+    @extend %t5;
+  }
+
+  &-actions {
+    padding-top: 16px !important;
+    padding-bottom: 8px !important;
+  }
+
+  &-actions:last-child {
+    margin-bottom: 0 !important;
+    justify-content: flex-end;
+    padding-right: 16px;
+  }
+}
+
+.mat-datepicker-toggle {
+  color: $primary-color;
+}
+
+.cdk-overlay {
+  max-width: 80%;
+  width: 50%;
+}

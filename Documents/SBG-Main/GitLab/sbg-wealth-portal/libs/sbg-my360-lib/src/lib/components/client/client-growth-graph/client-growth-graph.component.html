@@ -1,0 +1,8 @@
+<div class="tile-section">
+  <div class="growth-graph-container">
+    <chart
+      [options]="chartOptions"
+      (load)="saveInstance($event.context)"
+    ></chart>
+  </div>
+</div>

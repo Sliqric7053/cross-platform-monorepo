@@ -1,0 +1,33 @@
+<div
+  class="card"
+  (click)="onTypeClicked()"
+  data-dtmid="link_Content_Assets"
+  attr.data-dtmtext="{{ productName }}"
+>
+  <div class="card-header">
+    <div>
+      <span>{{ productName }}</span
+      ><br />
+      <span class="institute-name">{{
+        institutionName ? institutionName : '&nbsp;'
+      }}</span>
+    </div>
+    <span class="card-text-right t6 color-medium" *ngIf="!isOffShore"
+      >Onshore <i class="material-icons card-onshore-flag">label</i></span
+    >
+    <span class="card-text-right t6 color-medium" *ngIf="isOffShore"
+      >Offshore <i class="material-icons card-offshore-flag">label</i></span
+    >
+  </div>
+  <div class="card-content-combined">
+    <div class="card-current-value t6">
+      <span>Current value</span><br />
+      <span class="card-value-totals t4">{{ currentValue }}</span>
+    </div>
+    <div class="card-equity-value t6">
+      <span>{{ type }} {{ name.toLowerCase() }}</span
+      ><br />
+      <span class="card-value-totals t4">{{ totalPercentage }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div
+  class="layout-flex-column-start tile-header-inactive"
+  *ngIf="heading === 'Asset Allocation'"
+>
+  <p>
+    <span class="icon-avatar">
+      <mat-icon svgIcon="icn_graph_donut" class="avatar-icon"></mat-icon> </span
+    >{{ heading }}
+  </p>
+</div>
+
+<div
+  class="layout-flex-column-start tile-header-inactive"
+  *ngIf="heading === 'Net Wealth Breakdown'"
+>
+  <p>
+    <span class="icon-avatar">
+      <mat-icon svgIcon="icn_cash_notes" class="avatar-icon"></mat-icon> </span
+    >{{ heading }}
+  </p>
+</div>
+
+<div
+  class="layout-flex-column-start tile-header-inactive"
+  *ngIf="heading === 'Linked Accounts'"
+>
+  <p>
+    <span class="icon-avatar">
+      <mat-icon svgIcon="icn_link" class="avatar-icon"></mat-icon> </span
+    >{{ heading }}
+  </p>
+</div>
+
+<div>
+  <p>
+    <img
+      *ngIf="heading === 'Asset Allocation'"
+      src="../../../../assets/images/empty_assetallocation.png"
+      class="tile-image"
+    />
+  </p>
+</div>
+<div class="allocation-tile-container">
+  <div class="graph-container-inactive">
+    <div class="no-data-header">No data</div>
+    <div class="no-data-text">There is currently no information to show</div>
+  </div>
+</div>

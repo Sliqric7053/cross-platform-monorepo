@@ -1,0 +1,18 @@
+.enable-disable-row {
+  height: 50px;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media all and (max-width: 639px) {
+  .enable-disable-row {
+    // I'm assuming it must apply this different padding to .enable-disable-row ?
+    padding: 10px 0;
+  }
+}
+
+.not-enabled {
+  margin-left: 30px;
+}

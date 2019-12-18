@@ -1,0 +1,16 @@
+{
+  "/version.html": {
+    "target": "https://testmobilebanking.standardbank.co.za:7083",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/sbg-mobile": {
+    "target": {
+      "host": "testmobilebanking.standardbank.co.za:7083",
+      "protocol": "https:"
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info"
+  }
+}

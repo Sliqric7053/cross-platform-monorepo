@@ -1,0 +1,34 @@
+<div class="layout-parent">
+  <div class="layout-container">
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav mode="over">
+        <sbg-ui-sidenav (navToggle)="sidenav.toggle()"></sbg-ui-sidenav>
+      </mat-sidenav>
+      <div class="layout">
+        <div class="layout__header">
+          <div class="layout__header-row">
+            <sbg-ui-toolbar
+              (navToggle)="handleNavToggle()"
+              (onLogout)="onLogout()"
+              [loginButtonText]="loginButtonText"
+              [currentFlow]="currentFlow$"
+              [selectedClient]="selectedClient$"
+              [active]="isEditing"
+              [showLogin]="showLogin"
+              [goalSetterFlows]="goalSetterFlows"
+            ></sbg-ui-toolbar>
+          </div>
+          <breadcrumb
+            [selectedClient]="selectedClient$"
+            class="hide-for-small"
+            *ngIf="displayBreadcrumb"
+          ></breadcrumb>
+        </div>
+        <div class="layout__content">
+          <div sbg-analytics></div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-sidenav-container>
+  </div>
+</div>

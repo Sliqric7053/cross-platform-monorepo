@@ -1,0 +1,30 @@
+<sbg-spotlight
+  [loading$]="loading$"
+  [clientDetails]="selectedClient$"
+></sbg-spotlight>
+<mat-tab-group (selectedTabChange)="tabChanged($event)">
+  <mat-tab label="Combined">
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-asset-allocation-combined
+        [model]="assetAllocationCombinedSummary$"
+        [types]="assetAllocationCombinedTypes$"
+      ></client-asset-allocation-combined>
+    </sbg-loading-container>
+  </mat-tab>
+  <mat-tab label="Onshore">
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-asset-allocation-onshore
+        [model]="assetAllocationOnshoreSummary$"
+        [types]="assetAllocationOnshoreTypes$"
+      ></client-asset-allocation-onshore>
+    </sbg-loading-container>
+  </mat-tab>
+  <mat-tab label="Offshore">
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-asset-allocation-offshore
+        [model]="assetAllocationOffshoreSummary$"
+        [types]="assetAllocationOffshoreTypes$"
+      ></client-asset-allocation-offshore>
+    </sbg-loading-container>
+  </mat-tab>
+</mat-tab-group>

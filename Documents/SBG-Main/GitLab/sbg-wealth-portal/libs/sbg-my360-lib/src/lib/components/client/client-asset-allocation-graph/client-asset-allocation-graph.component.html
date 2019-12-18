@@ -1,0 +1,8 @@
+<div class="asset-allocation-graph-container" id="chartContainer">
+  <div>
+    <chart
+      [options]="chartOptions"
+      (load)="saveInstance($event.context)"
+    ></chart>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.card {
+  border-radius: 2px;
+  background-color: $white-color;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.card-header {
+  border-bottom: 1px solid $gray-medium-color;
+  padding: 12px 16px;
+  @extend %t3-action;
+}
+
+.card-content {
+  padding: 12px 16px;
+  @extend %t6;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4px;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.card-row-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: $gray-light-color;
+}
+
+.card-onshore-flag {
+  color: $notification-color;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.left {
+  width: 33%;
+  text-align: left;
+}
+
+.right {
+  width: 33%;
+  text-align: right;
+}
+
+.centre {
+  width: 33%;
+  text-align: center;
+}
+
+.card-offshore-flag {
+  color: $identifier-color;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait),
+  only screen and (max-device-width: 768px) {
+  .card {
+    margin-bottom: 8px;
+  }
+}

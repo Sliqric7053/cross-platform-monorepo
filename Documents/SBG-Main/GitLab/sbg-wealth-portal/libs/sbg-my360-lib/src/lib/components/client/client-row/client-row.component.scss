@@ -1,0 +1,272 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+:host {
+  flex: 1;
+  display: flex;
+}
+
+.name-column {
+  flex: 0.76;
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -10px;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+  min-height: 60px;
+  align-items: center;
+  @media all and (max-width: 730px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+::ng-deep .sbg-table-hide-for-small {
+  @media all and (min-width: 640px) {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  @media all and (max-width: 640px) {
+    display: none;
+  }
+}
+
+.alignment-avatar,
+.alignment-name-id {
+  white-space: nowrap;
+  div {
+    display: inline-block;
+  }
+}
+
+.alignment-avatar {
+  flex: 0;
+}
+
+::ng-deep .alignment-id,
+::ng-deep .alignment-name {
+  display: block;
+  flex: 1;
+}
+
+::ng-deep .alignment-name-id {
+  display: none;
+}
+
+@media all and (max-width: 730px) {
+  ::ng-deep .alignment-name,
+  ::ng-deep .alignment-id {
+    display: none;
+  }
+  ::ng-deep .alignment-name-id {
+    display: block;
+    flex: 1;
+    div {
+      vertical-align: middle;
+    }
+  }
+}
+
+.client-switch {
+  justify-self: end;
+  padding-right: 21px;
+}
+
+.client-toggle-loader {
+  justify-self: end;
+  padding-right: 24px;
+  display: flex;
+  justify-content: flex-end;
+  flex: 0.9;
+}
+
+.switch-text {
+  padding-right: 5px;
+}
+
+.avatar--text {
+  color: $white-color;
+  padding: 11px;
+}
+
+a {
+  @extend %t5-link;
+}
+
+.avatar {
+  &-initial {
+    border: 1px solid $primary-color;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 8px;
+    color: $primary-color;
+    margin-right: 17px;
+  }
+
+  &-icon {
+    width: 40px;
+    height: 40px;
+    background-color: $primary-color;
+    border-radius: 20px;
+  }
+
+  &-disabled {
+    background-color: $gray-light-color !important;
+    color: $white-color;
+
+    .avatar--icon {
+      background-color: $font-light-color !important;
+    }
+  }
+}
+
+.contact-type--disabled {
+  color: $gray-dark-color;
+  cursor: default;
+  pointer-events: none;
+}
+
+.mat-menu-item {
+  @extend %t5-action;
+}
+
+.client-row-group {
+  flex: 1;
+
+  p {
+    width: 10px;
+    height: 16px;
+  }
+}
+
+.name-row {
+  height: 60px;
+  border-bottom: 1px solid $gray-medium-color;
+}
+
+.client-row {
+  width: 100%;
+  border-radius: 3px;
+  background-color: $white-color;
+  @extend %sbg-shadow;
+  padding: 5px;
+
+  .client-name {
+    height: 16px;
+    @extend %t5;
+    padding-left: 10px;
+    margin-right: auto;
+  }
+
+  .overflow-menu {
+    color: $primary-color;
+  }
+}
+
+.contact-method-container {
+  color: $primary-color;
+  margin-top: -40px;
+  padding-bottom: 18px;
+}
+
+.btn-container {
+  position: relative;
+  padding: 0 22px;
+}
+
+@media all and (max-width: 639px) {
+  ::ng-deep .sbg-table-header-row {
+    display: none;
+  }
+  ::ng-deep .sbg-table-row {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .client-row {
+    padding: 0;
+    margin-bottom: 8px;
+  }
+
+  .contact-method-container {
+    padding-bottom: 0;
+
+    div {
+      flex: 1 1 50%;
+      padding: 10px;
+      margin-top: 40px;
+    }
+  }
+
+  .client-contacts {
+    &-phone {
+      border-right: 1px solid $gray-medium-color;
+      margin-left: 15%;
+    }
+
+    &-mail {
+      margin-left: 20%;
+    }
+  }
+
+  .avatar-initial {
+    margin-left: 14px;
+  }
+
+  .avatar--disabled .avatar--icon {
+    background-color: $white-color !important;
+  }
+
+  .avatar--disabled {
+    background-color: $gray-dark-color !important;
+  }
+
+  .client-row .client-name {
+    height: 16px;
+    padding-left: 8px;
+    margin-right: auto;
+    color: $primary-color;
+  }
+
+  .avatar--container {
+    padding: 10px;
+    border-bottom: 1px solid $gray-medium-color;
+    margin-left: -10px;
+  }
+
+  .client-switch {
+    padding-right: 0;
+    margin-top: 5px;
+  }
+
+  .show-for-large {
+    display: none !important;
+  }
+}
+
+.avatar--disabled {
+  border: 1px solid $gray-dark-color !important;
+  background-color: $gray-dark-color !important;
+  color: #767676 !important;
+}
+
+.enable-on-app-label {
+  line-height: 23px;
+  margin-right: 10px;
+}
+
+@media all and (min-width: 640px) {
+  ::ng-deep .show-for-small {
+    display: none !important;
+  }
+}

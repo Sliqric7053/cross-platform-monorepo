@@ -1,0 +1,27 @@
+@import '../../../../assets/css/common';
+
+:host {
+  text-align: center;
+}
+
+img {
+  height: 45px;
+}
+
+.content-container {
+  padding-top: 30px;
+}
+
+.icon {
+  color: $font-light-color;
+  margin: 47px;
+  font-size: 32px;
+}
+
+p:nth-of-type(2) {
+  color: $font-light-color;
+}
+
+.home-button-container {
+  margin-top: 72px;
+}

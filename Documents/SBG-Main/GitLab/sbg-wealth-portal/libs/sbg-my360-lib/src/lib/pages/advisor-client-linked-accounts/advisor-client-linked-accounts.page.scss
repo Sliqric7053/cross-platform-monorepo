@@ -1,0 +1,280 @@
+@import 'apps/sbg-my360-app/src/css/_colors.scss';
+
+mdl-layout-content {
+  background: $gray-medium-color;
+  overflow-y: scroll;
+}
+
+.page-header {
+  margin: 24px 0 16px 30px;
+  padding: 0;
+  justify-content: left;
+}
+
+.client-container {
+  background-color: $white-color;
+  margin: 0 30px 30px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.search {
+  background-color: $white-color;
+  display: flex;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+  mat-input-container {
+    padding-right: 30px;
+  }
+  margin: 0 30px;
+  padding-top: 15px;
+}
+
+.search-icon {
+  vertical-align: sub;
+}
+
+.search-icon-position {
+  margin-right: 8px;
+}
+
+.client-number {
+  margin-right: 30px;
+}
+
+.enable-disable-row {
+  height: 50px;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 30px;
+  background-color: $white-color;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.not-enabled {
+  margin-left: 30px;
+}
+
+.name-row {
+  height: 50px;
+  border-bottom: 1px solid $gray-dark-color;
+}
+
+tr.name-row:hover {
+  background-color: $gray-light-color;
+  cursor: pointer;
+}
+
+.table-header-row {
+  background-color: $gray-medium-color;
+  height: 33px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 16px;
+}
+
+.table-header-alphabet {
+  background-color: $gray-light-color;
+  border-bottom: 1px solid $gray-medium-color;
+}
+
+.alphabet {
+  padding-left: 16px;
+  height: 43px;
+}
+
+.avatar-initial {
+  border: 1px solid $white-color;
+  width: 45px;
+  height: 45px;
+  border-radius: 40px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.avatar-initial-inactive {
+  background-color: $gray-dark-color;
+  border: 1px solid $gray-dark-color;
+  width: 45px;
+  height: 45px;
+  border-radius: 40px;
+  padding: 10px;
+  color: $font-light-color;
+  margin-left: 20px;
+}
+
+.column-badge {
+  width: 100px;
+}
+
+.text-right {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.client-switch {
+  padding-right: 28px;
+  float: right;
+  padding-top: 14px;
+}
+
+.column-spacer {
+  width: 16px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  position: relative;
+}
+
+td {
+  position: relative;
+}
+
+.card-onshore-flag {
+  color: #ffb822;
+  vertical-align: middle;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.card-offshore-flag {
+  color: #b34fc5;
+  vertical-align: middle;
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-size: 15px;
+  margin-left: 3px;
+}
+
+.account-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.institute-text {
+  margin-left: 8px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.linked-accounts-card {
+  background-color: $white-color;
+  padding: 8px;
+  border-radius: 3px;
+  margin: 0 8px 8px;
+}
+
+.hide-for-large {
+  display: none;
+}
+
+mdl-textfield {
+  padding: 8px 0px;
+}
+
+.no-matches-found {
+  padding: 80px;
+  text-align: center;
+}
+
+.not-active {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media all and (max-width: 639px) {
+  .hide-for-small {
+    display: none;
+  }
+
+  .hide-for-large {
+    visibility: visible;
+    display: block;
+  }
+
+  .enable-disable-row {
+    display: grid;
+    background: $gray-medium-color;
+    margin: 8px 8px;
+    padding: 8px 0px;
+    box-shadow: none;
+  }
+
+  .page-header {
+    margin: 24px 8px 16px 8px;
+    padding-bottom: 0;
+  }
+
+  .not-enabled {
+    margin-left: 0;
+  }
+
+  .product-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+
+  .flag {
+    float: right;
+  }
+
+  .card-width {
+    width: 50%;
+    line-height: initial;
+  }
+
+  .search {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    background-color: $white-color;
+    border-bottom: 1px solid $gray-medium-color;
+    display: flex;
+    margin: 0 8px;
+  }
+
+  .search-icon {
+    margin-right: 8px;
+    margin-left: 16px !important;
+    vertical-align: sub;
+  }
+
+  mdl-textfield {
+    padding: 8px 0;
+  }
+
+  .no-matches-found {
+    padding: 80px;
+    margin: 0 auto;
+  }
+
+  .mobile-content {
+    margin-top: 60px;
+  }
+
+  .no-matches-mobile {
+    display: flex;
+  }
+}

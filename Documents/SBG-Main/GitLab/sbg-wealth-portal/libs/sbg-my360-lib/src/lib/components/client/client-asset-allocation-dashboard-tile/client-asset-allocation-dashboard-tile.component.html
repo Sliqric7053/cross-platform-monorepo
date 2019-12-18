@@ -1,0 +1,62 @@
+<div
+  [ngClass]="{ tile: isLinkable === 'true' }"
+  class="layout-flex-column"
+  (click)="onTileClicked()"
+  data-dtmid="link_Content_Dashboard"
+  data-dtmtext="Assets Allocation"
+>
+  <div
+    class="layout-flex-column-start tile-header"
+    [ngClass]="{ 'tile-header-inactive': isLinkable === 'false' }"
+  >
+    <p>
+      <span class="icon-avatar" *ngIf="isLinkable === 'true'"
+        ><mat-icon svgIcon="icn_graph_donut" class="avatar-icon"></mat-icon
+      ></span>
+      Asset Allocation
+      <mat-icon
+        *ngIf="isLinkable === 'true'"
+        svgIcon="icn_chevron_right"
+      ></mat-icon>
+    </p>
+  </div>
+  <div>
+    <client-asset-allocation-graph
+      [model]="model"
+      [chartOptions]="graphConfig"
+      [currencyCode]="currencyCode"
+    ></client-asset-allocation-graph>
+  </div>
+  <div
+    class="comparison-graph-aa"
+    [ngClass]="{ 'white-background': isLinkable === 'false' }"
+  >
+    <client-total-graph [model]="totalGraphModel"></client-total-graph>
+    <div class="graph-tile-footer right-alignment">
+      <span
+        >Offshore ({{ offShorePercentage }})
+        <i class="material-icons card-onshore-flag flag-dashboard"
+          >label</i
+        ></span
+      ><br />
+      <span
+        >{{ offShoreValue }}
+        <i class="material-icons card-onshore-flag flag-transparent"
+          >label</i
+        ></span
+      >
+    </div>
+    <div class="graph-tile-footer left-alignment">
+      <span
+        ><i
+          class="material-icons card-offshore-flag flag-dashboard flag-dashboard-offshore"
+          >label</i
+        >Onshore ({{ onShorePercentage }}) </span
+      ><br />
+      <span
+        ><i class="material-icons card-onshore-flag flag-transparent">label</i
+        >{{ onShoreValue }}
+      </span>
+    </div>
+  </div>
+</div>

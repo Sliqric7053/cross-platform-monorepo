@@ -1,0 +1,30 @@
+<sbg-spotlight
+  [loading$]="loading$"
+  [clientDetails]="selectedClient$"
+></sbg-spotlight>
+<mat-tab-group (selectedTabChange)="tabChanged($event)">
+  <mat-tab label="Combined">
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-net-wealth-combined
+        [model]="netWealthCombinedSummary$"
+        [types]="netWealthCombinedTypes$"
+      ></client-net-wealth-combined>
+    </sbg-loading-container>
+  </mat-tab>
+  <mat-tab label="Onshore">
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-net-wealth-onshore
+        [model]="netWealthOnshoreSummary$"
+        [types]="netWealthOnshoreTypes$"
+      ></client-net-wealth-onshore>
+    </sbg-loading-container>
+  </mat-tab>
+  <mat-tab label="Offshore">
+    <sbg-loading-container [progressBar]="true" [loading]="loading$ | async">
+      <client-net-wealth-offshore
+        [model]="netWealthOffshoreSummary$"
+        [types]="netWealthOffshoreTypes$"
+      ></client-net-wealth-offshore>
+    </sbg-loading-container>
+  </mat-tab>
+</mat-tab-group>

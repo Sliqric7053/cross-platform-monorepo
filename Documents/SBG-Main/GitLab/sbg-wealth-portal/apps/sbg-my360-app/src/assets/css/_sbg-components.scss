@@ -1,0 +1,85 @@
+@import '../../../../../../style/components/_sbg-shadow';
+@import '../../../../../../style/components/sbg-palette.scss';
+@import '../../../../../../style/components/sbg-typography-new.scss';
+
+.sbg {
+  &-table {
+    &-upper,
+    &-lower,
+    &-filter,
+    sbg-expansion-panel {
+      @media all and (min-width: 640px) {
+        @include sbg-shadow;
+      }
+    }
+    &-zebra-stripes {
+      .sbg-table-upper,
+      .sbg-table-lower {
+        > :nth-child(even) {
+          background-color: $gray-light-color;
+        }
+      }
+    }
+    &-actions {
+      &-print,
+      &-download {
+        color: $primary-color;
+      }
+    }
+    &-row,
+    &-filter {
+      @media all and (min-width: 640px) {
+        background-color: $white-color;
+      }
+      border-bottom-color: $gray-medium-color;
+    }
+    &-filter {
+      border-bottom-color: $gray-dark-color;
+    }
+    &-search {
+      background-color: $gray-light-color;
+      border-bottom-color: $gray-dark-color;
+    }
+    &-header-row {
+      background-color: $gray-light-color;
+      @extend %t6-weight-med-color-dark;
+    }
+    &-group-row {
+      background-color: $gray-light-color;
+      border-bottom-color: $gray-medium-color;
+      @extend %sbg-shadow;
+      @extend %t4-weight-med-color-dark;
+    }
+    &-group-container.expanded {
+      .sbg-table-row-details-container {
+        .sbg-table-row {
+          background-color: $primary-color-light;
+          &:hover {
+            background-color: $primary-color-light;
+          }
+        }
+      }
+    }
+    &-animation-container {
+      @extend %sbg-shadow;
+    }
+    &-expanded-row-content {
+      background-color: $white-color;
+    }
+    &-left-strip {
+      background-color: $tertiary-color;
+    }
+    &:not(.sbg-table-zebra-stripes) {
+      @media all and (min-width: 640px) {
+        .sbg-table-row {
+          &:hover {
+            background-color: $gray-light-color;
+          }
+        }
+      }
+    }
+    &-row.sbg-table-zebra-stripes.sbg-table-zebra-stripes:hover {
+      background-color: $white-color;
+    }
+  }
+}

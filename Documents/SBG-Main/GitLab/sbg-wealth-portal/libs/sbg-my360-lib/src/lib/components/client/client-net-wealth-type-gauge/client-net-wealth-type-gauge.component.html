@@ -1,0 +1,14 @@
+<div class="main-gauge-container" (click)="onTypeClicked()">
+  <div class="gauge-position">
+    <client-gauge-graph
+      [model]="percentage"
+      [graphColor]="graphColor"
+      [name]="name"
+      [chartOptions]="gaugeConfig"
+    ></client-gauge-graph>
+  </div>
+  <div class="asset-data">
+    <p>{{ name }}</p>
+    <p>{{ totalValueFormatted }}</p>
+  </div>
+</div>

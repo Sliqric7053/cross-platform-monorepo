@@ -1,0 +1,52 @@
+<div
+  class="tile flex-100"
+  (click)="onTileClicked()"
+  data-dtmid="link_Content_Dashboard"
+  data-dtmtext="Links Account"
+>
+  <div class="layout-flex-column-start tile-header">
+    <p>
+      <span class="icon-avatar"
+        ><mat-icon svgIcon="icn_link" class="avatar-icon"></mat-icon
+      ></span>
+      {{
+        getProductsCount(
+          (groupProductsCount | async) ? (groupProductsCount | async) : 0,
+          (thirdPartyCount | async) ? (thirdPartyCount | async) : 0,
+          (unmanagedProductsCount | async)
+            ? (unmanagedProductsCount | async)
+            : 0
+        )
+      }}
+      Linked Accounts
+      <mat-icon svgIcon="icn_chevron_right"></mat-icon>
+    </p>
+  </div>
+  <div class="accounts-tile-container">
+    <div class="accounts-container">
+      <div>
+        <span class="number">{{
+          (groupProductsCount | async) ? (groupProductsCount | async) : 0
+        }}</span>
+        <span class="account-name">Standard Bank Accounts</span>
+      </div>
+      <br />
+      <div>
+        <span class="number">{{
+          (thirdPartyCount | async) ? (thirdPartyCount | async) : 0
+        }}</span>
+        <span class="account-name">Other Financial Institutions </span>
+      </div>
+      <br />
+      <div>
+        <span class="number">{{
+          (unmanagedProductsCount | async)
+            ? (unmanagedProductsCount | async)
+            : 0
+        }}</span>
+        <span class="account-name">Other assets and liabilities </span>
+        <br />
+      </div>
+    </div>
+  </div>
+</div>

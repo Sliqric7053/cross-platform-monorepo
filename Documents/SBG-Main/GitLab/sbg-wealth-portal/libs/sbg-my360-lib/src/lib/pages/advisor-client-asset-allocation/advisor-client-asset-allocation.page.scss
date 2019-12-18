@@ -1,0 +1,31 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+mdl-layout-content {
+  background: $gray-medium-color;
+  overflow-y: scroll;
+}
+
+::ng-deep advisor-home {
+  mat-tab-header .mat-tab-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mat-tab-label-active {
+    color: #fff !important;
+  }
+
+  .mat-tab-label,
+  .mat-tab-link {
+    color: #7182aa;
+  }
+
+  .mat-ink-bar {
+    background-color: #fff !important;
+    height: 4px;
+  }
+
+  .mat-tab-label-container {
+    background-image: linear-gradient(to top, #001648, #0033aa);
+  }
+}

@@ -1,0 +1,169 @@
+@import 'common';
+@import 'fonts';
+@import 'layout';
+@import 'container-layout';
+@import 'goal-setter';
+@import 'tiles';
+@import 'animation';
+@import 'sbg-components';
+
+*:focus {
+  outline: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  font-size: 16px;
+}
+
+button {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  @extend %t5;
+}
+
+p {
+  margin: 0;
+}
+
+.gauge-graph-percentage {
+  width: 65px;
+  text-align: center;
+  @extend %t5;
+}
+
+.button-container {
+  border-top: 1px solid $gray-medium-color;
+  padding: 8px;
+  width: 100% !important;
+
+  button {
+    margin-left: 8px;
+  }
+}
+
+.dialog {
+  border: none;
+  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14),
+    0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+  &-header {
+    @extend %t3-inverse;
+    background-color: $secondary-color;
+    height: 56px;
+    mat-icon {
+      color: $white-color;
+    }
+  }
+}
+
+.title-case {
+  text-transform: capitalize;
+}
+
+//Customize MDL components
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+  background: $white-color;
+  height: 3px;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+  color: $primary-color;
+  font-weight: 500;
+}
+
+.layout__drawer.is-visible {
+  left: 0;
+}
+
+.x-small-input-container {
+  .is-focused input {
+    border-bottom: none !important;
+  }
+}
+
+.small-input-container {
+  .is-focused input {
+    border-bottom: none !important;
+  }
+}
+
+sbg-loading-container {
+  flex: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.mouse-pointer {
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.notification-snackbar {
+  background-color: $font-dark-color !important;
+  margin-bottom: 24px;
+  color: $white-color;
+}
+
+.error-snackbar {
+  background-color: $negative-color !important;
+  margin-bottom: 24px;
+  color: $white-color;
+}
+
+.success-snackbar {
+  background-color: $positive-color !important;
+  margin-bottom: 24px;
+  color: $white-color;
+}
+
+.snackbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  mat-icon {
+    margin-right: 10px;
+  }
+}
+
+.graph-tile-footer {
+  padding-bottom: 10px;
+  span:first-child {
+    @extend %t5-color-light;
+  }
+  span:last-child {
+    @extend %t5-weight-med-color-dark;
+  }
+}
+
+.left-alignment {
+  float: left;
+  margin-left: 16px;
+}
+
+.right-alignment {
+  float: right;
+  margin-right: 16px;
+  text-align: right;
+}

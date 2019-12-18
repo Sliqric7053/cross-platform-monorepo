@@ -1,0 +1,17 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.growth-graph-container svg {
+  display: flex !important;
+  overflow: hidden;
+}
+
+chart {
+  flex: 1;
+  overflow: hidden;
+}
+
+.growth-graph-container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+}

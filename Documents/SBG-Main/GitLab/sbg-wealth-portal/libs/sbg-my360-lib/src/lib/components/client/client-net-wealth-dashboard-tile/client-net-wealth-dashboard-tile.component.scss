@@ -1,0 +1,53 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.netwealth-total-calculation {
+  margin: 15px 0px 7px;
+  display: flex;
+  align-items: center;
+}
+
+.weight-medium {
+  font-weight: 500 !important;
+}
+
+.label-container {
+  float: left;
+  margin-left: 16px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 95%;
+}
+
+.label-value-position {
+  float: right;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+div.graph-container {
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.assets-liabilities-values {
+  display: flex;
+  width: 100%;
+  justify-content: space-between !important;
+  margin-bottom: 50px;
+}
+
+.font-light-color {
+  color: $font-light-color !important;
+}
+
+@media all and (max-width: 639px) {
+}
+
+@media all and (min-width: 640px) {
+  .show-for-small {
+    display: none !important;
+  }
+}

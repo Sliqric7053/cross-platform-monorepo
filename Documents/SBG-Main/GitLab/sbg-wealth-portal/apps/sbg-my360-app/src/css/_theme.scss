@@ -1,0 +1,26 @@
+@import '../../../../../style/components/sbg-palette';
+:root {
+  --PRIMARY-COLOR: var(--primary-color, #{$primary-color});
+  --PRIMARY-COLOR-LIGHT: var(--primary-color-light, #{$primary-color-light});
+  --SECONDARY-COLOR: var(--secondary-color, #{$secondary-color});
+  --TERTIARY-COLOR: var(--tertiary-color, #{$tertiary-color});
+  --POSITIVE-COLOR: var(--positive-color, #{$positive-color});
+  --NEGATIVE-COLOR: var(--negative-color, #{$negative-color});
+  --ACCENT-COLOR: var(--accent-color, #{$accent-color});
+  --NOTIFICATION-COLOR: var(--notification-color, #{$notification-color});
+  --IDENTIFIER-COLOR: var(--identifier-color, #{$identifier-color});
+  --WHITE-COLOR: var(--white-color, #{$white-color});
+  --GRAY-DARK-COLOR: var(--gray-dark-color, #{$gray-dark-color});
+  --GRAY-MEDIUM-COLOR: var(--gray-medium-color, #{$gray-medium-color});
+  --GRAY-LIGHT-COLOR: var(--gray-light-color, #{$gray-light-color});
+  --FONT-DARK-COLOR: var(--font-dark-color, #{$font-dark-color});
+  --FONT-MEDIUM-COLOR: var(--font-medium-color, #{$font-medium-color});
+  --FONT-LIGHT-COLOR: var(--font-light-color, #{$font-light-color});
+
+  --OUTER-CONTAINER-MARGIN-LAYOUT: 32px;
+  --INNER-CONTAINER-MARGIN-LAYOUT: 16px;
+  @media all and (max-width: 640px) {
+    --OUTER-CONTAINER-MARGIN-LAYOUT: 16px;
+    --INNER-CONTAINER-MARGIN-LAYOUT: 8px;
+  }
+}

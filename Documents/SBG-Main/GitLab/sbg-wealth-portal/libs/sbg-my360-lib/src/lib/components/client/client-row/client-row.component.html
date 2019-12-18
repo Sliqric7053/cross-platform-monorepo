@@ -1,0 +1,70 @@
+<div class="sbg-table-hide-for-small">
+  <div class="sbg-table-cell alignment-avatar">
+    <div class="avatar-initial" [ngClass]="{ 'avatar--disabled': !isEnabled }">
+      {{ initials }}
+    </div>
+  </div>
+  <div class="sbg-table-cell">
+    <div data-attr-searchable="true" data-attr-sortable="firstName">
+      {{ firstname }}
+    </div>
+  </div>
+  <div class="sbg-table-cell">
+    <div data-attr-searchable="true" data-attr-sortable="lastName">
+      {{ lastname }}
+    </div>
+  </div>
+  <div data-attr-searchable="true" class="sbg-table-cell">
+    {{ idNumber }}
+  </div>
+  <div data-attr-searchable="true" class="sbg-table-cell">
+    <a href="{{ phonePath }}" (click)="onEvent($event)">
+      <span matTooltip="Call client">{{ phoneFormatted }}</span>
+    </a>
+  </div>
+  <div data-attr-searchable="true" class="sbg-table-cell">
+    <a href="{{ emailPath }}" (click)="onEvent($event)">
+      <span matTooltip="Send email">{{ email }}</span>
+    </a>
+  </div>
+  <div style="width: 16px;"></div>
+</div>
+<div class="layout-flex-column-start client-row-group show-for-small">
+  <div class="client-row">
+    <div class="layout-flex-row-center-start avatar--container btn-container">
+      <span>{{ initials }}</span>
+      <span>{{ firstname }} {{ lastname }}</span>
+    </div>
+    <div class="layout-flex-row-center-end contact-method-container">
+      <div class="client-contacts-phone btn-container">
+        <sbg-button-ng
+          [matMenuTriggerFor]="m5"
+          [class.contact-type--disabled]="!haveContacts"
+          (click)="onEvent($event)"
+        >
+          <mat-icon>phone</mat-icon>
+        </sbg-button-ng>
+        <mat-menu #m5="matMenu">
+          <a href="{{ phonePath }}">
+            <button mat-menu-item>{{ phoneFormatted }}</button>
+          </a>
+        </mat-menu>
+      </div>
+      <div class="client-contacts-mail btn-container">
+        <sbg-button-ng
+          icon-button
+          [matMenuTriggerFor]="m6"
+          [class.contact-type--disabled]="!haveContacts"
+          (click)="onEvent($event)"
+        >
+          <mat-icon>mail</mat-icon>
+        </sbg-button-ng>
+        <mat-menu #m6="matMenu" xPosition="before">
+          <a href="{{ emailPath }}">
+            <button mat-menu-item>{{ email }}</button>
+          </a>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</div>

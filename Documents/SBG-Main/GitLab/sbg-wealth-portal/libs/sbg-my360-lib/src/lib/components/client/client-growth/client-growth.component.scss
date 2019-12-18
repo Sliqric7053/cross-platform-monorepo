@@ -1,0 +1,29 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.growth-row {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  font-size: 12px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.tile-header-grey {
+  padding: 15px;
+  color: $font-dark-color;
+}
+
+@media all and (max-width: 639px) {
+  .growth-row {
+    display: block;
+    text-align: left;
+  }
+
+  .tile-container {
+    margin: 16px 0;
+    height: auto;
+  }
+}

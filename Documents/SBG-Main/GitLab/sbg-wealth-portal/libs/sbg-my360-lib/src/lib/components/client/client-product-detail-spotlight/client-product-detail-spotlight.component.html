@@ -1,0 +1,56 @@
+<div class="product-detail-spotlight-container">
+  <sbg-pulse-loader
+    *ngIf="loading"
+    [inverse]="true"
+    name="valueLabel"
+  ></sbg-pulse-loader>
+  <div class="product-detail-spotlight-content">
+    <span *ngIf="!loading"
+      ><div class="product-detail-name title-case">
+        {{ productDetails.productName }}
+      </div>
+      <div class="t5 inverse">{{ productDetails.valueLabel }}</div>
+      <div *ngIf="getHasForeignValue() === true">
+        <div class="t1 inverse">{{ getFormattedSourceValue() }}</div>
+        <div class="t3 inverse">( {{ getFormattedCurrentValue() }} )</div>
+      </div>
+      <div *ngIf="getHasForeignValue() === false">
+        <div class="t1 inverse">{{ getFormattedCurrentValue() }}</div>
+      </div>
+    </span>
+    <div *ngIf="productDetails.protectionType">
+      Protection type:
+      <span *ngIf="!loading" class="title-case">{{
+        productDetails.protectionType
+      }}</span>
+    </div>
+    <div class="onshore-offshore" *ngIf="productDetails.isOffshore && !loading">
+      Offshore <i class="material-icons flag-icon-offshore">label</i>
+    </div>
+    <div
+      class="onshore-offshore"
+      *ngIf="!productDetails.isOffshore && !loading"
+    >
+      Onshore <i class="material-icons flag-icon-onshore">label</i>
+    </div>
+    <div class="start-date-account-row">
+      <div *ngIf="!loading" class="start-date">
+        <span class="date-acc-data"
+          >Start date: {{ getFormattedStartDate() }}</span
+        >
+        <span *ngIf="institutionName">
+          <span>|</span>
+          <span class="date-acc-data title-case"
+            >institution: {{ institutionName }}</span
+          >
+        </span>
+        <span *ngIf="productDetails.accountNumber">
+          <span>|</span>
+          <span class="date-acc-data"
+            >Account no: {{ productDetails.accountNumber }}</span
+          >
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

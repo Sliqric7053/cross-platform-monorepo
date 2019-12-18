@@ -1,0 +1,44 @@
+@import '../../../../style/components/sbg-typography-new';
+
+@keyframes blink {
+  0% {
+    opacity: .2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes text-pulse {
+  0% {
+  }
+  70% {
+    font-weight: 900;
+  }
+  100% {
+  }
+}
+
+.animation-text-pulse {
+  animation-name: text-pulse;
+  animation-duration: 0.6s;
+  transform-origin: center;
+  animation-timing-function: ease-in-out;
+}
+
+.parent-animate {
+  transition: height 0.2s ease-out;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+
+.content-animate {
+  transition: top 0.2s ease-out;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}

@@ -1,0 +1,31 @@
+{
+  "/version.html": {
+    "target": "http://localhost:9092",
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/sbg-mobile/rest/GMM/GrowMyMoneyServices/SendMessageWithHtmlAttachment": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/sbg-mobile/rest/GMM/GrowMyMoneyServices": "/calculator/rest/CMS"
+    }
+  },
+  "/sbg-mobile/rest/GMM/GrowMyMoneyServices/SendEmailWithAttachment": {
+    "target": "http://localhost:8080",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "sbg-mobile/rest/GMM/GrowMyMoneyServices/SendEmailWithAttachment":
+        "/calculator/rest/CMS/SendMessageWithHtmlAttachment"
+    },
+    "secure": false,
+    "logLevel": "debug"
+  },
+  "/sbg-mobile": {
+    "target": "http://localhost:9092",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

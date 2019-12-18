@@ -1,0 +1,46 @@
+<div class="main-container">
+  <div class="page-heading t2">
+    Net Wealth Breakdown
+    <span class="hide-for-large">for {{ firstName }} {{ lastName }}</span>
+  </div>
+  <div class="main-container-top">
+    <div class="layout-flex-column-start netwealth-total-calculation">
+      <span>Total value</span>
+      <span class="primary">{{ totalValue }}</span>
+    </div>
+    <div class="wealth-main-graph">
+      <client-net-wealth-graph
+        *ngIf="windowWidth < 800"
+        isMobile="true"
+        [model]="model"
+        [chartOptions]="graphConfig"
+      ></client-net-wealth-graph>
+      <client-net-wealth-graph
+        *ngIf="windowWidth >= 800"
+        [model]="model"
+        [chartOptions]="graphConfig"
+      ></client-net-wealth-graph>
+    </div>
+    <div class="comparison-graph">
+      <div class="al-line-spacer">
+        <client-total-graph [model]="totalGraphModel"></client-total-graph>
+      </div>
+      <div class="graph-tile-footer left-alignment">
+        <span>Assets</span><br />
+        <span>{{ assetsValue }}</span>
+      </div>
+      <div class="graph-tile-footer right-alignment">
+        <span>Liabilities</span><br />
+        <span>{{ liabilitiesValue }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="main-container-bottom">
+    <client-net-wealth-type
+      [context]="context"
+      *ngFor="let type of types | async"
+      [model]="type"
+      (typeSelected)="typeSelected($event)"
+    ></client-net-wealth-type>
+  </div>
+</div>

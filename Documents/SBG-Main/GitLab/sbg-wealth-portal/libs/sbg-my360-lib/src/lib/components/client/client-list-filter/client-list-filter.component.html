@@ -1,0 +1,22 @@
+<div class="enable-disable-row">
+  <div class="enabled">
+    <mat-checkbox
+      [disabled]="!disabledOnApp"
+      [(ngModel)]="enabledOnApp"
+      (change)="updateDataGroups()"
+      data-dtmid="client list_context menu_action"
+      data-dtmtext="Enabled on App"
+      >Enabled on My360
+    </mat-checkbox>
+  </div>
+  <div class="not-enabled">
+    <mat-checkbox
+      [disabled]="!enabledOnApp"
+      [(ngModel)]="disabledOnApp"
+      (change)="updateDataGroups()"
+      data-dtmid="client list_context menu_action"
+      data-dtmtext="Disabled on App"
+      >No access
+    </mat-checkbox>
+  </div>
+</div>

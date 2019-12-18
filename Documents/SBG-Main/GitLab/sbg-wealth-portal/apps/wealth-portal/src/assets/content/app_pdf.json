@@ -1,0 +1,919 @@
+{
+  "page1": {
+    "email_address": "",
+    "fax_number1": "",
+    "fax_number2": "",
+    "page_main_heading": "",
+    "page_sub_heading": "",
+    "page_form_instrunctions_part1": [""],
+    
+    "page_form_instructions_part2": "",
+    "client_option": {
+      "heading": "",
+      "option1": "",
+      "option2": ""
+    },
+    "stanlib_investment_account_number_heading": "",
+    "employee_number_heading": "",
+    "section1": {
+      "heading": "",
+      "natural_person": {
+        "heading": "",
+        "option1": "",
+        "option2": ""
+      },
+      "other_entity_types": {
+        "heading": "",
+        "option1": "",
+        "option2": "",
+        "option3": "",
+        "option4": "",
+        "option5": "",
+        "option6": "",
+        "option7": "",
+        "option8": "",
+        "option9": "",
+        "specify_other": ""
+      },
+      "please_note_heading": "",
+      "please_note_text": [""]
+    },
+    "section2": {
+      "heading": "",
+      "certified_copies": {
+        "heading": "",
+        "option1": "",
+        "option2": "",
+        "option3": ""
+      },
+      "please_note_text": [""]
+    },
+    "section3": {
+      "heading": "",
+      "investment_proposal_number": "",
+      "title": "",
+      "names": "",
+      "surname": "",
+      "id_passport_number": "",
+      "date_of_birth": "",
+      "passport_expiry_date": "",
+      "country_of_issue": "",
+      "country_of_birth": "",
+      "cellphone_number": "",
+      "telephone_number": "",
+      "telephone_home": ""
+    }
+  },
+  "page2": {
+    "section_continued": {
+      "email_address": "",
+      "source_of_funds": {
+        "heading": "",
+        "option1": "",
+        "option2": "",
+        "option3": "",
+        "option4": "",
+        "option5_part1": " ",
+        "option5_part2": ""
+      },
+      "source_of_income": "",
+      "country_of_residence": "",
+      "nationality": "",
+      "compulsory_subtext": ""
+    },
+    "section1": {
+      "heading": "",
+      "registered_tax_payer": {
+        "heading": "",
+        "option1": "",
+        "option2": ""
+      },
+      "tax_countries_table_title": [""],
+      "tax_countries_table": {
+        "col1_heading": "",
+        "col2_heading": "",
+        "row1_col1_prefix": "",
+        "row2_col1_prefix": "",
+        "row3_col1_prefix": "",
+        "row4_col1_prefix": "",
+        "row5_col1_prefix": ""
+      },
+      "compulsory_subtext": ""
+    },
+    "section2": {
+      "heading": "",
+      "please_note_heading": "",
+      "please_note_text": [""],
+      "title": "",
+      "contact_name_and_surname": "",
+      "id_number": "",
+      "relationship": "",
+      "cellphone_number": "",
+      "telephone_work": "",
+      "email_address": ""
+    },
+    "section3": {
+      "heading": "",
+      "intro_text_list": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": ""
+        }
+      },
+      "intro_text": ["All partnerships must complete the addendum available on www.stanlib.com and submit the completed addendum with the application form. All entities are required to complete the Tax Information for Entities Annexures. This annexure is available on our website, www.stanlib.com. All controlling persons need to supply FICA Documents."],
+      "investment_proposal_number": "INVESTMENT PROPOSAL NUMBER",
+      "registered_name_of_entity": "",
+      "trade_name": "",
+      "date_of_inception": "",
+      "registration_number": "",
+      "income_tax_number": "",
+      "country_of_tax": "",
+      "compulsory_text": ""
+    }
+  },
+  "page3": {
+    "section1": {
+      "heading": "",
+      "title": "",
+      "contact_name_and_surname": "",
+      "cellphone_number": "",
+      "telephone_number": "",
+      "email_address": "",
+      "compulsory_text": ""
+    },
+    "section2": {
+      "heading": "",
+      "house_complex_number": "",
+      "complex_name_estate": "",
+      "street_number": "",
+      "street_name": "",
+      "suburb": "",
+      "city": "",
+      "country": "",
+      "code": "",
+      "compulsary_text": ""
+    },
+    "section3": {
+      "heading": "",
+      "same_as_physical_option": "",
+      "po_box_number": "",
+      "post_office_name": "",
+      "postal_code": "",
+      "private_bag_number": "",
+      "postnet_suite_number": "",
+      "code": ""
+    },
+    "section4": {
+      "heading": "",
+      "paragraph1": "",
+      "paragraph2": "",
+      "hardcopy_option": ""
+    },
+    "section5": {
+      "heading": "",
+      "paragraph1_part1": "",
+      "paragraph1_part2": [""],
+      "paragraph1_part3": "",
+      "option1": "",
+      "option2": ""
+    }
+  },
+  "page4": {
+    "section1": {
+      "heading": "",
+      "paragraph1_part1": [""],
+      "paragraph1_part2": [""],
+      "paragraph1_part3": [""],
+      "option1": "",
+      "option2": ""
+    },
+    "section2": {
+      "heading": "",
+      "goal_description_table": {
+        "col1_heading": "",
+        "col2_heading": "",
+        "col3_heading": "",
+        "row1_subheading": ""
+      }
+    },
+    "section3": {
+      "heading": "",
+      "option1": "",
+      "option2": "",
+      "option3": "",
+      "paragraph1": "",
+      "list": {
+        "title": "",
+        "list_item1": [""],
+        "list_item2": [""],
+        "list_item3": [""],
+        "list_item4": "",
+        "list_item5": "",
+        "list_item6": [""],
+        "list_item7": [""],
+        "list_item8": [""],
+        "list_item9": "",
+        "list_item10": ""
+      },
+      "paragraph2": "",
+      "initial_advice_fee_rand_table": {
+        "table_title_part1": "",
+        "table_title_part2": "",
+        "table_sub_title": "",
+        "col1_heading": "",
+        "col2_heading": "",
+        "col3_heading": "",
+        "col4_heading": "",
+        "col_3_4_heading": "",
+        "col5_heading": "",
+        "col6_heading": "",
+        "col7_heading": "",
+        "col_5_6_7_heading": "",
+        "col8_heading": "",
+        "row1_col1": "",
+        "row1_col2": "B1",
+        "row1_col3": "",
+        "row1_col4": "%",
+        "row1_col5": "",
+        "row1_col6": "R",
+        "row1_col7_option1": "",
+        "row1_col7_option2": "",
+        "row1_col7_option3": "",
+        "row1_col8": "",
+        "row2_col1": "Standard STANLIB GoalConserver&trade; Fund of Funds",
+        "row2_col2": "B1",
+        "row2_col3": "",
+        "row2_col4": "%",
+        "row2_col5": "",
+        "row2_col6": "R",
+        "row2_col7_option1": "3",
+        "row2_col7_option2": "6",
+        "row2_col7_option3": "12",
+        "row2_col8": "1.15%",
+        "row3_col1": "Standard STANLIB GoalBuilder&trade; Fund of Funds",
+        "row3_col2": "B1",
+        "row3_col3": "",
+        "row3_col4": "%",
+        "row3_col5": "",
+        "row3_col6": "R",
+        "row3_col7_option1": "3",
+        "row3_col7_option2": "6",
+        "row3_col7_option3": "12",
+        "row3_col8": "1.25%",
+        "row4_col1": "Standard STANLIB GoalAdvancer&trade; Fund of Funds",
+        "row4_col2": "B1",
+        "row4_col3": "",
+        "row4_col4": "%",
+        "row4_col5": "",
+        "row4_col6": "R",
+        "row4_col7_option1": "3",
+        "row4_col7_option2": "6",
+        "row4_col7_option3": "12",
+        "row4_col8": "1.35%",
+        "row5_col1": "Standard STANLIB GoalAccelerator&trade; Fund of Funds",
+        "row5_col2": "B1",
+        "row5_col3": "",
+        "row5_col4": "%",
+        "row5_col5": "",
+        "row5_col6": "R",
+        "row5_col7_option1": "3",
+        "row5_col7_option2": "6",
+        "row5_col7_option3": "12",
+        "row5_col8": "1.40%",
+        "compulsory_footer": ""
+      } 
+    }
+  },
+  "page5": {
+    "section_continued": {
+      "initial_advice_fee_percentage_table": {
+        "table_title_part1": "",
+        "table_title_part2": "",
+        "table_sub_title": "",
+        "col1_heading": "",
+        "col2_heading": "",
+        "col3_heading": "",
+        "col4_heading": "",
+        "col_3_4_heading": "",
+        "col5_heading": "",
+        "col6_heading": "",
+        "col_5_6_heading": "",
+        "col7_heading": "",
+        "row1_col1": "Standard STANLIB GoalDefender&trade; Fund of Funds",
+        "row1_col2": "B1",
+        "row1_col3": "",
+        "row1_col4": "%",
+        "row1_col5": "",
+        "row1_col6": "%",
+        "row1_col7": "1.00%",
+        "row2_col1": "Standard STANLIB GoalConserver&trade; Fund of Funds",
+        "row2_col2": "B1",
+        "row2_col3": "",
+        "row2_col4": "%",
+        "row2_col5": "",
+        "row2_col6": "%",
+        "row2_col7": "1.15%",
+        "row3_col1": "Standard STANLIB GoalBuilder&trade; Fund of Funds",
+        "row3_col2": "B1",
+        "row3_col3": "",
+        "row3_col4": "%",
+        "row3_col5": "",
+        "row3_col6": "%",
+        "row3_col7": "1.25%",
+        "row4_col1": "Standard STANLIB GoalAdvancer&trade; Fund of Funds",
+        "row4_col2": "B1",
+        "row4_col3": "",
+        "row4_col4": "%",
+        "row4_col5": "",
+        "row4_col6": "%",
+        "row4_col7": "1.35%",
+        "row5_col1": "Standard STANLIB GoalAccelerator&trade; Fund of Funds",
+        "row5_col2": "B1",
+        "row5_col3": "",
+        "row5_col4": "%",
+        "row5_col5": "",
+        "row5_col6": "%",
+        "row5_col7": "1.40%"
+      }
+    },
+    "section1": {
+      "heading": "",
+      "list": {
+        "title": "",
+        "list_item1": [""],
+        "list_item2": [""],
+        "list_item3": [""],
+        "list_item4": [""],
+        "list_item5": [""]
+      },
+      "advice_fee_table": {
+        "col1_heading": "",
+        "col2_heading": "",
+        "col3_heading": "",
+        "row1_col1": "",
+        "row1_col2": "",
+        "row1_col3": "",
+        "row2_col1": "",
+        "row2_col2": "",
+        "row2_col3": "",
+        "row3_col1": "",
+        "row3_col2": "",
+        "row3_col3": "",
+        "row4_col1": "",
+        "row4_col2": "",
+        "row4_col3": "%",
+        "row5_col1": "",
+        "row5_col2": "",
+        "row5_col3": ""
+      },
+      "signature_of_client_part1": "",
+      "signature_of_client_part2": "",
+      "signature_of_adviser": "",
+      "date": "",
+      "signed_at": "",
+      "mandatory_text": ""
+    }
+  },
+  "page6": {
+    "section1": {
+      "heading": "",
+      "new_investments": {
+        "heading": "",
+        "account_name": "",
+        "bank": "",
+        "branch_code": "",
+        "account_number": "",
+        "reference": ""
+      },
+      "additional_investment": {
+        "heading": "",
+        "account_name": "",
+        "bank": "",
+        "branch_code": "",
+        "account_number": "",
+        "reference": ""
+      }
+    },
+    "section2": {
+      "heading": "",
+      "deposit_amount": "",
+      "deposit_currency": "",
+      "deposit_date": "",
+      "deposit_reference": ""
+    },
+    "section3": {
+      "heading": "",
+      "once_off_debit_amount": "",
+      "once_off_debit_amount_currency": "",
+      "once_off_debit_date": "",
+      "paragraph1": [""]
+    },
+    "section4": {
+      "heading": "",
+      "debit_order_date": "",
+      "commencement_date": "",
+      "payment_frequency": "",
+      "option1": ""
+    },
+    "section5": {
+      "heading": "",
+      "note_heading": "",
+      "note_text": "",
+      "transaction_types": {
+        "heading": "",
+        "option1": "",
+        "option2": ""
+      },
+      "payment_notes": [""],
+      "bank_details": {
+        "bank": "",
+        "branch": "",
+        "branch_code": "",
+        "account_number": "",
+        "account_type": {
+          "heading": "",
+          "option1": "",
+          "option2": "",
+          "option3": ""
+        },
+        "account_holder_id": "",
+        "account_holder_name": "",
+        "account_holder_signature": ""
+      },
+      "debit_order_notes": {
+        "title": "",
+        "list_item1": "",
+        "list_item2": "",
+        "list_item3": ""
+      }
+    }
+  },
+  "page7": {
+    "section1": {
+      "heading": "",
+      "paragraph1": "",
+      "percentage_increase": {
+        "title": "",
+        "option1": "",
+        "option2": "",
+        "option3": "",
+        "option4": ""
+      },
+      "effective_month": ""
+    },
+    "section2": {
+      "heading": "",
+      "link_options": {
+        "option1": "",
+        "option2": ""
+      },
+      "accounts_table": {
+        "col1_heading": "",
+        "col2_heading": ""
+      },
+      "paragraph1": [""],
+      "card_number": "",
+      "card_number_note": "",
+      "account_holder_name": "",
+      "account_type": {
+        "title": "",
+        "option1": "",
+        "option2": "",
+        "option3": "",
+        "option4": ""
+      }
+    },
+    "section3": {
+      "heading": "",
+      "list": {
+        "list_item1": [""],
+        "list_item2": [""],
+        "list_item3": [""],
+        "list_item4": [""]
+      }
+    },
+    "section4": {
+      "heading": "",
+      "fsp_licence_no": "",
+      "stanlib_id": "",
+      "name": ""
+    },
+    "section5": {
+      "heading": "",
+      "paragraph1": [""],
+      "left": {
+        "subsection1": {
+          "heading": "",
+          "list": {
+            "list_item1": "",
+            "list_item2": [""],
+            "list_item3": "",
+            "list_item4": [""],
+            "list_item5": [""]
+          }
+        }
+      },
+      "right": {
+        "subsection1": {
+          "heading": "",
+          "list": {
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": [""]
+          }
+        },
+        "subsection2": {
+          "heading": "",
+          "list": {
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": ""
+          }
+        }
+      }
+    }
+  },
+  "page8": {
+    "left": {
+      "subsection1": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": "",
+          "list_item4": "",
+          "list_item5": "",
+          "list_item6": [""],
+          "list_item6_sub1": "",
+          "list_item6_sub2": "",
+          "list_item7": ""
+        }
+      },
+      "subsection2": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": [""],
+          "list_item4": ""
+        }
+      },
+      "subsection3": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": [""]
+        }
+      },
+      "subsection4": {
+        "heading": "",
+        "list": {
+          "list_item1": [""],
+          "list_item2": [""],
+          "list_item3": "",
+          "list_item4": [""],
+          "list_item5": ""
+        }
+      },
+      "subsection5": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": [""],
+          "list_item3": "",
+          "list_item4": ""
+        }
+      },
+      "subsection6": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": "",
+          "list_item4": ""
+        }
+      }
+    },
+    "right": {
+      "subsection_continued": {
+        "list": {
+          "list_item5": [""],
+          "list_item6": ""
+        }
+      },
+      "subsection1": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": "",
+          "list_item4": [""],
+          "list_item5": "",
+          "list_break": [""],
+          "list_item6": "",
+          "list_item7": ""
+        }
+      },
+      "subsection2": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": [""],
+          "list_item4": "",
+          "list_item5": [""],
+          "list_item6": [""],
+          "list_item7": [""],
+          "list_item8": "",
+          "list_item9": [""],
+          "list_item10": ""
+        }
+      },
+      "subsection3": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": ""
+        }
+      },
+      "subsection4": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": [""],
+          "list_item4": ""
+        }
+      }
+    },
+    "center": {
+      "part1": "",
+      "part2": [""]
+    },
+    "bottom_left": {
+      "list": {
+        "list_item1": "",
+        "list_item2": "",
+        "list_item3": "",
+        "list_item4": "",
+        "list_item5": "",
+        "list_item6": "",
+        "list_item7": "",
+        "list_item8": "",
+        "list_item9": "",
+        "list_item10": "",
+        "list_item11": [""],
+        "list_item12": "",
+        "list_item13": "",
+        "list_item14": ""
+      }
+    },
+    "bottom_right": {
+      "subsection1": {
+        "heading": "",
+        "sub_heading": [""],
+        "list": {
+          "list_item1": "",
+          "list_item2": "",
+          "list_item3": ""
+        }
+      },
+      "subsection2": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": ""
+        }
+      },
+      "subsection3": {
+        "heading": "",
+        "list": {
+          "list_item1": ""
+        }
+      },
+      "subsection4": {
+        "heading": "",
+        "list": {
+          "list_item1": "",
+          "list_item2": ""
+        }
+      }
+    }
+  },
+  "page9": {
+    "paragraph": [""],
+    "third_party_notice": {
+      "heading": "",
+      "list": {
+        "list_item1": "",
+        "list_item2": "",
+        "list_item3": ""
+      }
+    },
+    "paragraph2": "",
+    "section1": {
+      "heading": "",
+      "paragraph1": [""],
+      "paragraph2": [""],
+      "left": {
+        "subsection1": {
+          "heading": "",
+          "list": {
+            "list_item1": "",
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": ""
+          }
+        },
+        "subsection2": {
+          "heading": "",
+          "list": {
+            "list_item1": [""],
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": "",
+            "list_item5": "",
+            "list_item6": ""
+          }
+        },
+        "subsection3": {
+          "heading": "",
+          "subsubsection1": {
+            "heading": [""],
+            "list": {
+              "list_item1": "",
+              "list_item2": "",
+              "list_item3": [""],
+              "list_item4": "",
+              "list_item5": "",
+              "list_item6": [""],
+              "list_item7": [""]
+            }
+          },
+          "subsubsection2": {
+            "heading": "",
+            "list": {
+              "list_item": [""]
+            }
+          }
+        }
+      },
+      "right": {
+        "subsection1": {
+          "heading": "",
+          "list": {
+            "list_item1": [""],
+            "list_item2": [""]
+          }
+        },
+        "subsection2": {
+          "heading": "",
+          "list": {
+            "list_item1": [""]
+          }
+        },
+        "subsection3": {
+          "heading": "",
+          "list": {
+            "list_item1": "",
+            "list_item2": [""]
+          }
+        },
+        "subsection4": {
+          "heading": "",
+          "list": {
+            "list_item1": [""],
+            "list_item2": "",
+            "list_item3": "",
+            "list_item4": [""],
+            "list_item5": [""]
+          }
+        },
+        "subsection5": {
+          "heading": "",
+          "subheading": "",
+          "list": {
+            "list_item1": ""
+          }
+        },
+        "subsection6": {
+          "heading": "",
+          "subheading": "",
+          "list": {
+            "list_item1": ""
+          }
+        }
+      }
+    }
+  },
+  "page10": {
+    "section1": {
+      "heading": "",
+      "list": {
+        "list_item1": [""],
+        "list_item2": [""],
+        "list_item3": [""],
+        "list_item4": [""],
+        "list_item5": [""],
+        "list_item6": [""],
+        "list_item7": [""],
+        "list_item8": [""],
+        "list_item9": [""],
+        "list_item10": [""],
+        "list_item11": [""]
+      }
+    },
+    "section2": {
+      "heading": "",
+      "list": {
+        "list_item1": "",
+        "list_item2": "",
+        "list_item3": [""],
+        "list_item4": [""],
+        "list_item5": [""],
+        "list_item6": "",
+        "list_item7": [""],
+        "list_item8": [""],
+        "list_item9": [""],
+        "list_item10": [""],
+        "list_item11": [""],
+        "list_item12": "",
+        "list_item13": "",
+        "list_item14": [""],
+        "list_item15": [""],
+        "list_item16": [""],
+        "list_item17": "",
+        "list_item18": [""],
+        "list_item19": [""],
+        "list_item20": [""],
+        "list_item21": "",
+        "list_item22": [""],
+        "list_item23": [""]
+      }
+    }
+  },
+  "page11": {
+    "section_continued": {
+      "list": {
+        "list_item24": [""],
+        "list_item25": [""],
+        "list_item26": [""]
+      }
+    },
+    "section1": {
+      "paragraph": [""]
+    },
+    "section2": {
+      "paragraph": [""]
+    },
+    "section3": {
+      "heading": "",
+      "list": {
+        "list_item1": [""],
+        "list_item2": "",
+        "list_item3": [""],
+        "list_item4": ""
+      }
+    },
+    "section4": {
+      "list": {
+        "list_item1": "",
+        "list_item2": [""],
+        "list_item3": "",
+        "list_item4": "",
+        "list_item5": [""],
+        "list_item6": [""],
+        "list_item7": [""],
+        "list_item8": [""],
+        "list_item9": "",
+        "list_item10": ""
+      }
+    },
+    "section5": {
+      "heading": "",
+      "paragraph1": [""],
+      "paragraph2": [""],
+      "paragraph3": [""],
+      "paragraph4": [""],
+      "paragraph5": [""],
+      "paragraph6": [""],
+      "paragraph7": [""],
+      "client_signature": "",
+      "authorized_signature": "",
+      "financial_adviser_signature": "",
+      "date": "",
+      "signed_at": ""
+    }
+  },
+  "footer": {
+    "form_code": "SBFCR10",
+    "version_date": "2016/07",
+    "hx_code": "HX1639",
+    "footnote": "Please note that this form expires on 2017/12/31. Up to date forms are always available on www.stanlib.com"
+  }
+}

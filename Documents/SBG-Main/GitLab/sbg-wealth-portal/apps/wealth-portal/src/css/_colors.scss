@@ -1,0 +1,47 @@
+@import '../../../../../../style/components/sbg-palette';
+
+//Color UI usage
+//Base Colors
+$white-color: #ffffff; //Containers, Panels and dialogs base
+$gray-light-color: #f6f6f6; //Section divider base
+$ui-gray-medium-color: #ededed; //Divider lines and background base
+$secondary-color: #36c; //Sub-Navigation, highlights and spotlights base
+$primary-color: #03a; //Active base area
+
+//Font Colors
+$font-dark-color: #333; //Headers and important text
+$font-medium-color: #666; //Primary body copy color
+$font-light-color: #999; //Sub-text and labels
+$font-white-color: #ffffff; //Font color on dark backgrounds
+$font-tertiary-color: #0ad; //Contextual help
+$primary-color: #03a; //Active text
+$font-black-color: #000000;
+$greyish-brown: #444444;
+
+//Accent Colors
+$accent-alert-color: #a90a50; //Alert
+$positive-color: #0a3; //Success
+//$accent-negative-amount: #e70011; //Negative amount
+$accent-positive-color: #30aa22; //Positive amount
+$accent-negative-color: #e70011; //Positive amount
+$accent-accent-color: #f61; //Fab????
+$accent-notification-color: #ffb822; //Notification and dismissable elements
+$accent-tertiary-color: #0ad; //Focus
+$accent-neutral-info: #333; //Neutral info
+
+$color-primary: '0,51,170';
+$color-primary-dark: '51,102,204';
+$color-accent: '255,102,17';
+$color-primary-contrast: '246,246,246';
+$color-accent-contrast: '0,170,221';
+
+//custom
+$box-shadow-color: rgba(0, 0, 0, 0.25);
+$inner-shadow-color: #cccccc;
+$transparent-white-color: rgba(255, 255, 255, 0.1);
+$unselected-radio-button-color: #dbdbdb;
+//$table-border-color: #ededed;
+$container-grey-background-color: #f6f6f6;
+$transparent-primary-color: rgba(0, 51, 170, 0.05);
+$navigation-background: rgba(0, 50, 170, 0.05);
+$box-shadow: rgba(0, 0, 0, 0.25);

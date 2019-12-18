@@ -1,0 +1,34 @@
+<div class="layout-flex-column-start tile-header-grey t3">
+  {{ isLiability ? 'Liability tracking' : 'Growth' }}
+</div>
+<div class="growth-row">
+  <div>
+    <mat-select
+      *ngIf="getIsFundOfFunds()"
+      [(ngModel)]="selectedDropdownOption"
+      (ngModelChange)="onChange($event)"
+    >
+      <mat-option *ngFor="let option of dropdownData" [value]="option">{{
+        option
+      }}</mat-option>
+    </mat-select>
+  </div>
+  <div>
+    <span class="t5">{{ getFormattedStartValue() }}</span
+    ><br />
+    <span>invested at start (All distributions reinvested)</span>
+    <br /><br />
+  </div>
+</div>
+<client-growth-graph
+  [model]="graphData"
+  *ngIf="(windowWidth < 800 && isLiability) || !isLiability"
+  isMobile="true"
+  [chartOptions]="graphConfig"
+>
+</client-growth-graph>
+<client-growth-graph
+  [model]="graphData"
+  *ngIf="windowWidth >= 800 && isLiability"
+  [chartOptions]="graphConfig"
+></client-growth-graph>

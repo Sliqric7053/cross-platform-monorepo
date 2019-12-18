@@ -1,0 +1,105 @@
+@import 'apps/sbg-my360-app/src/css/_common.scss';
+
+.date {
+  width: 80%;
+  text-align: left;
+  padding-right: 30px;
+  margin: 0 auto;
+  padding: 11px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+.value {
+  @extend %t2-inverse;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.netwealth-calculation {
+  text-align: center;
+  color: $white-color;
+  padding-top: 4px;
+}
+
+.client-profile-main-container {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-gap: 24px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  @extend %t6;
+}
+
+.netwealth-banner {
+  background-image: linear-gradient(to top, #001648, #0033aa);
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tile-container {
+  background-color: $white-color;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 20px;
+
+  client-net-wealth-dashboard-tile,
+  client-asset-allocation-dashboard-tile,
+  client-product-list-dashboard-tile {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 639px) {
+  .tile-container {
+    client-net-wealth-dashboard-tile,
+    client-asset-allocation-dashboard-tile,
+    client-product-list-dashboard-tile {
+      display: flex;
+      height: inherit;
+    }
+  }
+
+  .client-profile-main-container {
+    display: block;
+    margin: 0 8px 8px 8px;
+    width: 96%;
+  }
+
+  .date {
+    padding-right: 8px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.5rem;
+    margin-left: 13px;
+    padding-bottom: 0;
+  }
+
+  .tile-container {
+    margin: 15px 1px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .client-profile-main-container {
+    display: block;
+    margin: 0 8px 8px 8px;
+  }
+  .tile-container {
+    margin: 15px 1px;
+  }
+}
