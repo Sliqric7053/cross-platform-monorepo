@@ -1,0 +1,286 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "game-engine-lib": {
+      "projectType": "library",
+      "root": "projects/game-engine-lib",
+      "sourceRoot": "projects/game-engine-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/game-engine-lib/tsconfig.lib.json",
+            "project": "projects/game-engine-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/game-engine-lib/src/test.ts",
+            "tsConfig": "projects/game-engine-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/game-engine-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/game-engine-lib/tsconfig.lib.json",
+              "projects/game-engine-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "tetris": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/tetris",
+      "sourceRoot": "projects/tetris/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/tetris",
+            "index": "projects/tetris/src/index.html",
+            "main": "projects/tetris/src/main.ts",
+            "polyfills": "projects/tetris/src/polyfills.ts",
+            "tsConfig": "projects/tetris/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/tetris/src/favicon.ico",
+              "projects/tetris/src/assets"
+            ],
+            "styles": [
+              "projects/tetris/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/tetris/src/environments/environment.ts",
+                  "with": "projects/tetris/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "tetris:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "tetris:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "tetris:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tetris/src/test.ts",
+            "polyfills": "projects/tetris/src/polyfills.ts",
+            "tsConfig": "projects/tetris/tsconfig.spec.json",
+            "karmaConfig": "projects/tetris/karma.conf.js",
+            "assets": [
+              "projects/tetris/src/favicon.ico",
+              "projects/tetris/src/assets"
+            ],
+            "styles": [
+              "projects/tetris/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tetris/tsconfig.app.json",
+              "projects/tetris/tsconfig.spec.json",
+              "projects/tetris/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/tetris/e2e/protractor.conf.js",
+            "devServerTarget": "tetris:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "tetris:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "tetris2": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/tetris2",
+      "sourceRoot": "projects/tetris2/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/tetris2",
+            "index": "projects/tetris2/src/index.html",
+            "main": "projects/tetris2/src/main.ts",
+            "polyfills": "projects/tetris2/src/polyfills.ts",
+            "tsConfig": "projects/tetris2/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/tetris2/src/favicon.ico",
+              "projects/tetris2/src/assets"
+            ],
+            "styles": [
+              "projects/tetris2/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/tetris2/src/environments/environment.ts",
+                  "with": "projects/tetris2/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "tetris2:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "tetris2:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "tetris2:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tetris2/src/test.ts",
+            "polyfills": "projects/tetris2/src/polyfills.ts",
+            "tsConfig": "projects/tetris2/tsconfig.spec.json",
+            "karmaConfig": "projects/tetris2/karma.conf.js",
+            "assets": [
+              "projects/tetris2/src/favicon.ico",
+              "projects/tetris2/src/assets"
+            ],
+            "styles": [
+              "projects/tetris2/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tetris2/tsconfig.app.json",
+              "projects/tetris2/tsconfig.spec.json",
+              "projects/tetris2/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/tetris2/e2e/protractor.conf.js",
+            "devServerTarget": "tetris2:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "tetris2:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "game-engine-lib"
+}
