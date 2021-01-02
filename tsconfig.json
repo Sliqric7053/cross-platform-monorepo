@@ -19,7 +19,7 @@
       "dom"
     ],
     "paths": {
-      "game-engine-lib": [
+      "@game-engine-lib": [
         "dist/game-engine-lib"
       ],
       "game-engine-lib/*": [
