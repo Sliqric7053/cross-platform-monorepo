@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start:tetris": "ng serve tetris -o",
+    "build:tetris": "ng build tetris",
+    "test:tetris": "ng test tetris",
+    "lint:tetris": "ng lint tetris",
+    "e2e:tetris": "ng e2e tetris",
+    "start:tetris2": "ng serve tetris2 -o",
+    "build:game-engine-lib": "ng build game-engine-lib --watch",
+    "test:game-engine-lib": "ng test game-engine-lib",
+    "lint:game-engine-lib": "ng lint game-engine-lib",
+    "e2e:game-engine-lib": "ng e2e game-engine-lib"
   },
   "private": true,
   "dependencies": {
