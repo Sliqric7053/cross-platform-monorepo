@@ -1,8 +1,15 @@
 {
   "name": "cross-platform-monorepo",
   "version": "0.0.0",
+  "description": "Cross-platform monorepo Angular app",
+  "author": {
+    "name": "your name",
+    "email": "your@email.address"
+  },
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
+    "start": "npm-run-all -p electron:serve start:tetris",
     "start:tetris": "ng serve tetris -o",
     "build:tetris": "ng build tetris",
     "test:tetris": "ng test tetris",
@@ -12,7 +19,9 @@
     "build:game-engine-lib": "ng build game-engine-lib --watch",
     "test:game-engine-lib": "ng test game-engine-lib",
     "lint:game-engine-lib": "ng lint game-engine-lib",
-    "e2e:game-engine-lib": "ng e2e game-engine-lib"
+    "e2e:game-engine-lib": "ng e2e game-engine-lib",
+    "electron:serve-tsc": "tsc -p tsconfig.serve.json",
+    "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && npx electron . --serve"
   },
   "private": true,
   "dependencies": {
@@ -24,9 +33,12 @@
     "@angular/platform-browser": "~11.0.5",
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
+    "electron-reload": "^1.5.0",
     "ng-zzfx": "0.0.6",
+    "npm-run-all": "^4.1.5",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
+    "wait-on": "^5.2.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
