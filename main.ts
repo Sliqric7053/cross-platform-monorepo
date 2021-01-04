@@ -35,7 +35,7 @@ function createWindow(): BrowserWindow {
   } else {
     win.loadURL(
       url.format({
-        pathname: path.join(__dirname, "dist/index.html"),
+        pathname: path.join(__dirname, "dist/tetris/index.html"),
         protocol: "file:",
         slashes: true,
       })
@@ -44,7 +44,7 @@ function createWindow(): BrowserWindow {
 
   // Emitted when the window is closed.
   win.on("closed", () => {
-    // Different from the window object, usually you would store window
+    // Deference from the window object, usually you would store window
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     win = null;
