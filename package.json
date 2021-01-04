@@ -9,9 +9,9 @@
   "main": "main.js",
   "scripts": {
     "ng": "ng",
+    "postinstall": "electron-builder install-app-deps",
     "start": "npm-run-all -p electron:serve start:tetris",
     "start:tetris": "ng serve tetris -o",
-    "build:tetris": "ng build tetris",
     "test:tetris": "ng test tetris",
     "lint:tetris": "ng lint tetris",
     "e2e:tetris": "ng e2e tetris",
@@ -21,7 +21,11 @@
     "lint:game-engine-lib": "ng lint game-engine-lib",
     "e2e:game-engine-lib": "ng e2e game-engine-lib",
     "electron:serve-tsc": "tsc -p tsconfig.serve.json",
-    "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && npx electron . --serve"
+    "electron:serve": "wait-on tcp:4200 && npm run electron:serve-tsc && npx electron . --serve",
+    "build": "npm run electron:serve-tsc && ng build tetris --base-href ./",
+    "build:dev": "npm run build -- -c dev",
+    "build:prod": "npm run build -- -c production",
+    "electron:build": "npm run build:prod && electron-builder build"
   },
   "private": true,
   "dependencies": {
@@ -51,6 +55,7 @@
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "electron": "^11.0.5",
+    "electron-builder": "^22.9.1",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.1.1",
