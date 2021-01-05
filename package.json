@@ -25,7 +25,13 @@
     "build": "npm run electron:serve-tsc && ng build tetris --base-href ./",
     "build:dev": "npm run build -- -c dev",
     "build:prod": "npm run build -- -c production",
-    "electron:build": "npm run build:prod && electron-builder build"
+    "electron:build": "npm run build:prod && electron-builder build",
+    "copy-android": "npx cap copy android",
+    "copy-ios": "npx cap copy ios",
+    "open:android-studio": "npx cap open android",
+    "open:xcode": "npx cap open ios",
+    "add-android": "npx cap add android",
+    "add-ios": "npx cap add ios"
   },
   "private": true,
   "dependencies": {
