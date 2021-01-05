@@ -1,23 +1,58 @@
-import { Component } from "@angular/core";
-import { ElectronService } from "./core/services";
+import { Component, OnInit } from "@angular/core";
+import {
+  CapacitorStorageService,
+  ElectronService,
+  PlatformService,
+} from "@shared-lib";
+
 import * as AppConfig from "../environments/environment";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "tetris";
-  constructor(private electronService: ElectronService) {
-    console.log("AppConfig", AppConfig);
+  constructor(
+    private platform: PlatformService,
+    private electronService: ElectronService,
+    private capStorageService: CapacitorStorageService
+  ) {
+    this.localStorageSet("highscore", 2);
+  }
 
-    if (electronService.isElectron) {
-      console.log(process.env);
+  async ngOnInit() {
+    if (this.platform.isElectron) {
       console.log("Run in electron");
+      // console.log(process.env);
       console.log("Electron ipcRenderer", this.electronService.ipcRenderer);
       console.log("NodeJS childProcess", this.electronService.childProcess);
+      const hs = await this.localStorageGet("highscore");
+      console.info("hs is: ", hs);
+    } else if (this.platform.isNative) {
+      console.log("Run in native");
+      const hs = await this.localStorageGet("highscore");
+      console.info("hs is: ", hs);
     } else {
       console.log("Run in browser");
+      const hs = await this.localStorageGet("highscore");
+      console.info("hs is: ", hs);
     }
+  }
+
+  async localStorageGet(key: string): Promise<any> {
+    if (this.platform.isElectron) {
+      (window as Window).localStorage.getItem(key);
+    }
+
+    return await this.capStorageService.get(key);
+  }
+
+  localStorageSet(key: string, value: any): void {
+    if (this.platform.isElectron) {
+      (window as Window).localStorage.setItem(key, value);
+    }
+
+    this.capStorageService.set(key, value);
   }
 }

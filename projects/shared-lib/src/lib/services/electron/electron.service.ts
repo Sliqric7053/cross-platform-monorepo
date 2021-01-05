@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { PlatformService } from "../common/platform.service";
 
 // If you import a module but never use any of the imported values other than as TypeScript types,
 // the resulting javascript file will look as if you never imported the module at all.
@@ -16,13 +17,9 @@ export class ElectronService {
   childProcess: typeof childProcess;
   fs: typeof fs;
 
-  get isElectron(): boolean {
-    return !!(window && window.process && window.process.type);
-  }
-
-  constructor() {
+  constructor(private platform: PlatformService) {
     // Conditional imports
-    if (this.isElectron) {
+    if (this.platform.isElectron) {
       this.ipcRenderer = window.require("electron").ipcRenderer;
       this.webFrame = window.require("electron").webFrame;
 
