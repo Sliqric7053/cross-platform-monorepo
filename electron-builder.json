@@ -20,15 +20,15 @@
     "!tslint.json"
   ],
   "win": {
-    "icon": "dist/assets/icons",
+    "icon": "dist/tetris/assets/icons",
     "target": ["portable"]
   },
   "mac": {
-    "icon": "dist/assets/icons",
+    "icon": "dist/tetris/assets/icons",
     "target": ["dmg"]
   },
   "linux": {
-    "icon": "dist/assets/icons",
+    "icon": "dist/tetris/assets/icons",
     "target": ["AppImage"]
   }
 }

@@ -34,7 +34,7 @@
     "build": "npm run build:libs && npm run electron-web && npm run copy:mobile",
     "build:dev": "npm run build -- -c dev",
     "build:prod": "npm run build -- -c production",
-    "electron:build": "npm run build:prod && electron-builder build",
+    "electron:package": "npm run build:prod && electron-builder build",
     "copy-android": "npx cap copy android",
     "copy-ios": "npx cap copy ios",
     "open:android-studio": "npx cap open android",
