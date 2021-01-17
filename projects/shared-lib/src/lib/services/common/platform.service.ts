@@ -14,7 +14,7 @@ export class PlatformService {
   constructor() {}
 
   get isElectron(): boolean {
-    return !!(window && window.process && window.process.type);
+    return !!window?.process?.type;
   }
 
   get isNative() {
