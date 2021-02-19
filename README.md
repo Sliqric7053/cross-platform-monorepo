@@ -7,8 +7,9 @@ You can read it here: https://indepth.dev/posts/1420/building-multi-platform-app
 **To run the project:**
 If you forked/cloned the project, you only need to run the following commands (from the root of the project):
 
-1. `npm run build`
-2. `npm run start`
+1. `npm install`
+2. `npm run build`
+3. `npm run start`
 
 This will launch both the Electron and Web apps.
 
