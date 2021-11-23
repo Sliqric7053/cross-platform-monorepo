@@ -18,7 +18,7 @@ function createWindow() {
             nodeIntegration: true,
             allowRunningInsecureContent: serve ? true : false,
             contextIsolation: false,
-            enableRemoteModule: true,
+            enableRemoteModule: true, // true if you want to run e2e test with Spectron or use remote module in renderer context (ie. Angular)
         },
     });
     if (serve) {

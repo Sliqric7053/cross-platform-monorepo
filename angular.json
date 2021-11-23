@@ -28,16 +28,6 @@
             "tsConfig": "projects/game-engine-lib/tsconfig.spec.json",
             "karmaConfig": "projects/game-engine-lib/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/game-engine-lib/tsconfig.lib.json",
-              "projects/game-engine-lib/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
         }
       }
     },
@@ -76,7 +66,6 @@
           "configurations": {
             "dev": {
               "outputHashing": "all",
-              "extractCss": true,
               "namedChunks": false,
               "aot": false,
               "extractLicenses": true,
@@ -90,7 +79,6 @@
             },
             "web": {
               "outputHashing": "all",
-              "extractCss": true,
               "namedChunks": false,
               "aot": false,
               "extractLicenses": true,
@@ -162,17 +150,6 @@
             ],
             "styles": ["projects/tetris/src/styles.scss"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/tetris/tsconfig.app.json",
-              "projects/tetris/tsconfig.spec.json",
-              "projects/tetris/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -284,17 +261,6 @@
             "scripts": []
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/tetris2/tsconfig.app.json",
-              "projects/tetris2/tsconfig.spec.json",
-              "projects/tetris2/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -333,18 +299,6 @@
             "main": "projects/shared-lib/src/test.ts",
             "tsConfig": "projects/shared-lib/tsconfig.spec.json",
             "karmaConfig": "projects/shared-lib/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/shared-lib/tsconfig.lib.json",
-              "projects/shared-lib/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
